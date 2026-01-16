@@ -1,0 +1,63 @@
+:root {
+  /* Color Variables */
+    --color-body: #1A1A1A;
+    --color-background: #262626;
+    --color-rarbackground: #333333;
+    --button-color: #9EFF00;
+    --color-aboutus-text: #D8FF99;
+    --color-footer-link: #98989A;
+    --color-text: #FDFFFA;
+    --color-titles: #FFFFFF;
+    --color-p: #E6E6E6;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background-color: var(--color-body);
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-titles);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/* 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+
+/* main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+} */
+@media (min-width: 1441px) {
+  * {
+    font-size: 18px;
+  }
+}
