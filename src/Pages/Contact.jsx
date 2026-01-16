@@ -1,9 +1,10 @@
+import FAQList from "../components/faq/FAQList"
 
 const Contact = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <FAQList/>
+    </>
   )
 }
 
