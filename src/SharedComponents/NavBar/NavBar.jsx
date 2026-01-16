@@ -17,13 +17,13 @@ function NavBar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="logo-section">
-          <img src="/public/assets/img/home/SquareUp_logo.png" alt="SquareUp" className="logo-img" />
+          <img src="assets/img/home/SquareUp_logo.png" alt="SquareUp" className="logo-img" />
           <span className="logo-text">SquareUp</span>
         </Link>
 
         <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
           <img 
-            src={"/public/assets/icons/mobileMenu.svg"} 
+            src={"assets/icons/mobileMenu.svg"} 
             alt="Menu Toggle" 
             className={`nav-icon ${isMenuOpen ? 'active' : ''}`}
             style={{ width: '25px', height: '17px' }}
