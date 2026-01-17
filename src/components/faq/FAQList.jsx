@@ -1,10 +1,17 @@
+import { useEffect, useState } from "react";
 import FAQItem from "./FAQItem";
 import "./FAQList.css";
 
-import faqData from "../../data/Data"; 
-
 const FAQList = () => {
+  const [faqData, setFaqData] = useState([]);
 
+  useEffect(() => {
+fetch("/Square-Up/data/data.json")
+
+      .then((res) => res.json())
+      .then((data) => setFaqData(data))
+      .catch((err) => console.error(err));
+  }, []);
 
   const firstColumn = faqData.slice(0, 4);
   const secondColumn = faqData.slice(4, 8);
