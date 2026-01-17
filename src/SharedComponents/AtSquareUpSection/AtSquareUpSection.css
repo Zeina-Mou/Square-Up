@@ -1,0 +1,153 @@
+.at-square-up {
+    margin-left: 162px;
+    margin-right: 162px;
+
+    h2 {
+        padding: 80px 40px 0px;
+        font-family: Barlow;
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 100%;
+        color: var(--color-titles);
+    }
+
+    .sb-square-desc {
+        padding: 10px 0px 40px 40px;
+        max-width: 1000px;
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.6%;
+        color: var(--color-p);
+    }
+    .sb-square-process{
+        margin-left:40px ;
+        max-width: 341px;
+        padding: 10px;
+        background-color: var(--color-background);
+        border-radius: 6px;
+        color: var(--color-titles);
+    }
+
+}
+
+.sb-container {
+    margin-left: 162px;
+    margin-right: 162px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sb-Card {
+    width: 50%;
+    border: 1px var(--color-background) solid;
+}
+
+.sb-content-card {
+    margin: 100px 50px;
+}
+
+.sb-TextContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+
+    h2 {
+        color: var(--color-aboutus-text);
+        font-family: Barlow;
+        font-weight: 600;
+        font-size: 150px;
+        line-height: 100%;
+    }
+
+    h4 {
+        padding-bottom: 26px;
+        color: var(--color-footer-link);
+        font-family: Barlow;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+    }
+}
+
+.sb-TextContainer .sb-title {
+    width: 548px;
+    margin-bottom: 14px;
+    border-bottom: 1px var(--color-background) solid;
+}
+
+.sb-desc {
+    margin-top: 50px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-footer-link);
+}
+
+@media (max-width: 1440px) {
+    .sb-container {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .sb-content-card {
+        margin: 80px 40px;
+    }
+
+    .sb-TextContainer {
+        h2 {
+            font-size: 120px;
+        }
+
+        h4 {
+            padding-bottom: 20px;
+            font-size: 24px;
+        }
+    }
+
+    .sb-TextContainer .sb-title {
+        margin-bottom: 12px;
+    }
+
+    .sb-desc {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .sb-container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .sb-Card {
+        width: 100%;
+    }
+
+    .sb-content-card {
+        margin: 40px 24px;
+    }
+
+    .sb-TextContainer {
+        h2 {
+            font-size: 80px;
+        }
+
+        h4 {
+            padding-bottom: 14px;
+            font-size: 20px;
+        }
+    }
+
+    .sb-TextContainer .sb-title {
+        margin-bottom: 8px;
+    }
+
+    .sb-desc {
+        font-size: 14px;
+    }
+}

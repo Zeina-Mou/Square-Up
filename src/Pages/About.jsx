@@ -1,9 +1,11 @@
+import OurStorySection from "../SharedComponents/OurStorySection/OurStorySection"
 
 const About = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <OurStorySection/>
+    
+    </>
   )
 }
 
