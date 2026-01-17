@@ -1,9 +1,14 @@
+import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 
 const Work = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <HeaderSection
+        title="Our Works"
+        description="Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise."
+        image={"assets/img/works/hero.png"}
+      />
+    </>
   )
 }
 

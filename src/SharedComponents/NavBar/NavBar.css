@@ -1,7 +1,7 @@
 .navbar {
     background-color: var(--color-body);
     border-bottom: 1px solid var(--color-background);
-    padding: 1.25rem 5rem;
+    padding: 1.25rem clamp(1rem, 5vw, 5rem);
 
     .navbar-container {
         display: flex;
@@ -20,20 +20,20 @@
 
             .logo-text {
                 font-weight: 600;
-                font-size: 1.25rem;
+                font-size: clamp(1.1rem, 0.5vw + 1rem, 1.25rem);
                 color: var(--color-titles);
             }
         }
 
         .nav-menu {
             display: flex;
-            gap: 1.5rem;
+            gap: clamp(0.8rem, 1.5vw, 1.5rem);
 
             .nav-link {
-                font-size: 0.9rem;
+                font-size: clamp(0.8rem, 0.2vw + 0.75rem, 1rem);
                 line-height: 150%;
                 color: var(--color-p);
-                padding: 0.75rem 1.25rem;
+                padding: 0.75rem clamp(0.5rem, 1vw, 1.25rem);
                 border-radius: 8px;
                 transition: 0.3s;
                 font-weight: 500;
@@ -77,7 +77,7 @@
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1.25rem 1rem;
+        padding: 1rem clamp(1rem, 3vw, 1.5rem);
         .navbar-container {
             position: relative;
             .mobile-toggle {
@@ -86,7 +86,7 @@
 
             .nav-menu {
                 position: absolute;
-                top: 147%;
+                top: 140%;
                 left: 0;
                 width: 100%;
                 background-color: var(--color-body);
@@ -96,6 +96,7 @@
                 transform: translateX(-150%);
                 transition: 0.4s ease-in-out;
                 border-bottom: 1px solid var(--color-background);
+                z-index: 100;
 
                 &.open {
                     transform: translateY(0);
