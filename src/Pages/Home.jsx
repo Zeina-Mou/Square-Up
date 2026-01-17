@@ -1,8 +1,8 @@
-
+import Hero from "./HeroComponent/Hero"
 const Home = () => {
   return (
     <div>
-      
+      <Hero />
     </div>
   )
 }
