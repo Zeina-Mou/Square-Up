@@ -1,9 +1,10 @@
+import Cta from "../SharedComponents/Cta/Cta"
 
 const Contact = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Cta />
+    </>
   )
 }
 

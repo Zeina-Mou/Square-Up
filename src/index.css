@@ -24,6 +24,7 @@
 
 body {
   background-color: var(--color-body);
+  padding: 0px 40px;
   
 }
 

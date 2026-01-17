@@ -1,9 +1,10 @@
+import Cta from "../SharedComponents/Cta/Cta"
 
 const About = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Cta />
+    </>
   )
 }
 

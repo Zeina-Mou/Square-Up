@@ -7,7 +7,8 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import NavBar from './SharedComponents/NavBar/NavBar'
 
-function App() {
+function App() { 
+
   return (
     <>
       <NavBar />
