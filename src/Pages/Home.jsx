@@ -1,4 +1,6 @@
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
+import FAQItem from "../components/faq/FAQItem"
+import FAQList from "../components/faq/FAQList"
 /* Main Home page component that serves as the entry point for the other sections */
 const Home = () => {
   return (
@@ -23,6 +25,7 @@ const Home = () => {
         description="Still you have any questions? Contact our Team via hello@squareup.com"
         image={"assets/img/home/frequently.png"}
       />
+      <FAQList/>
     </>
   )
 }
