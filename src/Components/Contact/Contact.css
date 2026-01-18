@@ -1,0 +1,279 @@
+.G-H_FormContact {
+    border: 1px solid var(--color-background);
+    padding: 80px;
+
+    .G-H_NameEmail {
+        display: flex;
+        gap: 40px;
+
+        .G-H_Name,
+        .G-H_Email {
+            width: 50%;
+
+            input {
+                width: 360px;
+            }
+        }
+    }
+
+    .G-H_Name,
+    .G-H_Email,
+    .G-H_TextArea {
+        padding: 24px 40px;
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-family: var(--font-barlow);
+            color: var(--color-titles);
+        }
+
+        input {
+            outline: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--color-rarbackground);
+            padding-bottom: 6px;
+            transition: 0.3s all ease-in-out;
+            color: var(--color-titles);
+        }
+
+        input:focus {
+            border-bottom: 1px solid var(--color-aboutus-text);
+        }
+
+        input::placeholder {
+            color: #656567;
+            font-family: var(--font-inter);
+            font-size: 18px;
+        }
+    }
+
+    .G-H_TextArea {
+        position: relative;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .G-H_TextArea::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% - 80px);
+        height: 1px;
+        background-color: var(--color-rarbackground);
+        bottom: 24px;
+    }
+
+    .G-H_Options {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        p {
+            font-family: var(--font-inter);
+            font-size: 22px;
+            color: var(--color-p);
+        }
+
+        .G-H_Option {
+            display: flex;
+            align-items: center;
+    
+
+            label {
+                font-family: var(--font-inter);
+                font-size: 18px;
+                color: var(--color-titles);
+                margin-left: 10px;
+            }
+
+            input[type="checkbox"] {
+                background: none;
+                width: 28px;
+                height: 28px;
+                accent-color: var(--color-background);
+                border: 1px solid  var(--color-rarbackground);
+                border-radius: 4px;
+                appearance: none;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.G-H_Option input[type="checkbox"]:checked::after {
+    content: url("../../../public/assets/icons/arrow.svg");
+    position: absolute;
+    color: var(--button-color);
+}
+
+.G-H_FormContact .G-H_Email,
+.G-H_FormContact .G-H_Name,
+.G-H_FormContact .G-H_OurWorks,
+.G-H_FormContact .G-H_TextArea {
+    background-color: #24242480;
+    border: 1px solid var(--color-background);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.G-H_FormContact .G-H_OurWorks {
+    padding: 40px;
+
+    p {
+        color: var(--color-titles);
+        font-size: 22px;
+    }
+}
+
+.G-H_FormContact .G-H_OurWorks,
+.G-H_FormContact .G-H_TextArea {
+    width: 100%;
+}
+
+.G-H_FormContact .G-H_TextArea {
+    padding-bottom: 64px;
+}
+
+.G-H_FormContact input[type="submit"] {
+    font-family: var(--font-barlow);
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    padding: 18px 44px;
+    background-color: var(--button-color);
+    margin: auto;
+    display: block;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .G-H_FormContact {
+        padding: 60px;
+
+        .G-H_NameEmail {
+            gap: 30px;
+
+            .G-H_Name,
+            .G-H_Email {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        .G-H_Name,
+        .G-H_Email,
+        .G-H_TextArea {
+            padding: 20px 30px;
+
+            label {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+
+            input::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        .G-H_OurWorks {
+            padding: 30px;
+
+            p {
+                font-size: 18px;
+            }
+
+            .G-H_Options {
+                .G-H_Option {
+                    label {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .G-H_TextArea {
+            padding-bottom: 54px;
+        }
+
+        .G-H_TextArea::after {
+            bottom: 24px;
+            width: calc(100% - 60px);
+        }
+    }
+
+    .G-H_FormContact input[type="submit"] {
+        padding: 14px 36px;
+        font-size: 14px;
+    }
+
+    .G-H_FormContact .G-H_Email,
+    .G-H_FormContact .G-H_Name,
+    .G-H_FormContact .G-H_OurWorks,
+    .G-H_FormContact .G-H_TextArea {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .G-H_FormContact {
+        padding: 24px;
+
+        .G-H_NameEmail {
+            flex-direction: column;
+            gap: 0;
+
+            .G-H_Name,
+            .G-H_Email {
+                width: 100%;
+            }
+        }
+
+        .G-H_Name,
+        .G-H_Email,
+        .G-H_TextArea {
+            padding: 18px 24px;
+
+            label {
+                font-size: 16px;
+                margin-bottom: 14px;
+            }
+        }
+
+        .G-H_Options {
+            margin-top: 30px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .G-H_TextArea {
+            padding-bottom: 52px;
+        }
+
+        .G-H_TextArea::after {
+            width: calc(100% - 48px);
+            bottom: 18px;
+        }
+    }
+
+    .G-H_FormContact .G-H_OurWorks {
+        padding: 30px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .G-H_FormContact input[type="submit"] {
+        width: 100%;
+    }
+}
