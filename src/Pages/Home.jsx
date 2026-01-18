@@ -1,10 +1,12 @@
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import FAQItem from "../components/faq/FAQItem"
 import FAQList from "../components/faq/FAQList"
+import Hero from "./HeroComponent/Hero"
 /* Main Home page component that serves as the entry point for the other sections */
 const Home = () => {
   return (
     <>
+      <Hero/>
       <HeaderSection
         title="Our Services"
         description="Transform your brand with our innovative digital solutions that captivate and engage your audience."
