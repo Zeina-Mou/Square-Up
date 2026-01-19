@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FAQList.css"
 
 const FAQItem = ({ number, question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);

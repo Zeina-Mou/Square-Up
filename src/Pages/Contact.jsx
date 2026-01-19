@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <>
       <HeaderSection
-        title="About Us"
-        description="Welcome to SquareUp, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation."
+        title="Contact Us"
+        description="Get in touch with us today and let us help you with any questions or inquiries you may have."
         image={"assets/img/contact/hero.png"}
       />
       <ContactForm />
