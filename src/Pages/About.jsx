@@ -1,9 +1,9 @@
-
+import AboutSquareUp from "../components/SquareUp/AboutSquareUp"
 const About = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <AboutSquareUp/>
+    </>
   )
 }
 

@@ -56,8 +56,3 @@ button {
   align-items: center;
   font-size: 2rem;
 } */
-@media (min-width: 1441px) {
-  * {
-    font-size: 18px;
-  }
-}
