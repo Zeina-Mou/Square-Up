@@ -14,7 +14,7 @@ body {
 }
 
 
-.kh-about-container {
+.ksh-about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,30 +26,30 @@ body {
 }
 
 
-.kh-about-content {
+.ksh-about-content {
   max-width: 480px;
 }
 
-.kh-about-content h2 {
+.ksh-about-content h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: var(--color-titles);
 }
 
-.kh-about-content p {
+.ksh-about-content p {
   font-size: 14px;
   line-height: 1.7;
   color: var(--color-p, );
 }
 
 
-.kh-about-visual {
+.ksh-about-visual {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.kh-visual-box {
+.ksh-visual-box {
   position: relative;
   width: 360px;
   height: 360px;
@@ -58,7 +58,7 @@ body {
 }
 
 
-.kh-visual-bg {
+.ksh-visual-bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -69,7 +69,7 @@ body {
 }
 
 
-.kh-visual-pattern {
+.ksh-visual-pattern {
   position: absolute;
   inset: 0;
   background-image: url("/assets/img/about/squares.png");
@@ -80,15 +80,15 @@ body {
 }
 
 
-.kh-visual-box::before,
-.kh-visual-box::after {
+.ksh-visual-box::before,
+.ksh-visual-box::after {
   content: "";
   position: absolute;
   z-index: 3;
 }
 
 
-.kh-visual-box::before {
+.ksh-visual-box::before {
   top: 50%;
   left: 0;
   width: 100%;
@@ -102,7 +102,7 @@ body {
 }
 
 
-.kh-visual-box::after {
+.ksh-visual-box::after {
   top: 0;
   left: 50%;
   width: 2px;
@@ -115,7 +115,7 @@ body {
   );
 }
 
-.kh-cube-img {
+.ksh-cube-img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,32 +126,32 @@ body {
 }
 
 @media (max-width: 1440px) {
-  .kh-about-container {
+  .ksh-about-container {
     padding: 60px;
   }
 
-  .kh-visual-box {
+  .ksh-visual-box {
     width: 300px;
     height: 300px;
   }
 
-  .kh-cube-img {
+  .ksh-cube-img {
     width: 60px;
     height: 60px;
   }
 
-  .kh-about-content h2 {
+  .ksh-about-content h2 {
     font-size: 28px;
   }
 
-  .kh-about-content p {
+  .ksh-about-content p {
     font-size: 13px;
   }
 }
 
 
 @media (max-width: 992px) {
-  .kh-about-container {
+  .ksh-about-container {
     flex-direction: row; 
     padding: 40px;
     align-items: center;
@@ -159,33 +159,33 @@ body {
     text-align: left;
   }
 
-  .kh-about-content {
+  .ksh-about-content {
     max-width: 100%;
     margin-bottom: 0; 
   }
 
-  .kh-visual-box {
+  .ksh-visual-box {
     width: 280px;
     height: 280px;
   }
 
-  .kh-cube-img {
+  .ksh-cube-img {
     width: 50px;
     height: 50px;
   }
 
-  .kh-about-content h2 {
+  .ksh-about-content h2 {
     font-size: 24px;
   }
 
-  .kh-about-content p {
+  .ksh-about-content p {
     font-size: 12px;
   }
 }
 
 
 @media (max-width: 576px) {
-  .kh-about-container {
+  .ksh-about-container {
     flex-direction: column; 
     padding: 10px 20px;    
     align-items: center;
@@ -193,12 +193,12 @@ body {
     justify-content: flex-start; 
   }
 
-  .kh-about-content {
+  .ksh-about-content {
     max-width: 100%;
     margin-bottom: 0; 
   }
 
-.kh-about-visual {
+.ksh-about-visual {
     width: 100%;
     display: flex;
     justify-content: flex-start; 
@@ -206,25 +206,25 @@ body {
     margin-left: 40px;
   }
 
-  .kh-visual-box {
+  .ksh-visual-box {
     width: 220px;
     height: 220px;
     margin-left: 0; 
   }
 
-  .kh-cube-img {
+  .ksh-cube-img {
     width: 40px;
     height: 40px;
   }
 
-  .kh-about-content h2 {
+  .ksh-about-content h2 {
     font-size: 20px;
     margin-bottom: 4px;
 
       text-align: left;
   }
 
-  .kh-about-content p {
+  .ksh-about-content p {
     width: 358px;
     font-size: 11px;
     margin-top: 10px;

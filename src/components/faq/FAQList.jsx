@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import FAQItem from "./FAQItem";
-import "./FAQList.css";
+import { useEffect, useState } from "react"
+import FAQItem from "./FAQItem"
+import "./FAQList.css"
 
 const FAQList = () => {
   const [faqData, setFaqData] = useState([]);
