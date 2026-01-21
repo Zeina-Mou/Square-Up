@@ -1,5 +1,4 @@
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
-import FAQList from "../components/faq/FAQList"
 import ContactForm from "../Components/Contact/Contact"
 
 const Contact = () => {
@@ -11,7 +10,6 @@ const Contact = () => {
         image={"assets/img/contact/hero.png"}
       />
       <ContactForm />
-      <FAQList/>
     </>
   )
 }
