@@ -1,0 +1,35 @@
+.G-H_DaysWorking span {
+    color: var(--color-p);
+    font-family: var(--font-barlow);
+    font-size: 22px;
+}
+
+.G-H_DaysWorking span:first-child {
+    margin-right: 14px;
+}
+
+.G-H_DaysWorking span:last-child {
+    background-color: var(--color-background);
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width:1440px) {
+    .G-H_DaysWorking span {
+        font-size: 16px;
+    }
+
+    .G-H_DaysWorking span:last-child {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .G-H_DaysWorking {
+        margin: 0;
+    }
+
+    .G-H_DaysWorking span {
+        font-size: 14px;
+    }
+}
