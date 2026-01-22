@@ -1,29 +1,46 @@
 import './AtSquareUpSection.css'
-import { AtSquareUpData1 } from '../../../public/saba-DataBase/AtSquareUpData'
 import NumberCard from './NumberCard'
-
+import { useEffect, useState } from 'react';
 
 function AtSquareUpSection() {
+    const [atSqerUpData, setAtSqerUpData] = useState([]);
+    const [showMore, setShowMore] = useState(false);
+
+    useEffect(() => {
+        fetch('/Square-Up/saba-DataBase/AtSquareUpData.json')
+            .then(res => res.json())
+            .then(data => setAtSqerUpData(data))
+            .catch(err => console.log(err));
+    }, []);
+
+    const visibleCount = showMore ? Math.min(8, atSqerUpData.length) : Math.min(4, atSqerUpData.length);
+    const visibleItems = atSqerUpData.slice(0, visibleCount);
+
     return (
-        <>
-            <div>
-                <div className='at-square-up'>
-                    <h2>At SquareUp</h2>
-                    <p className='sb-square-desc'>We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.</p>
-                    <div className='sb-square-process'> <p>Here's an overview of our typical process:</p></div>
-                </div>
-                <div className='sb-container'>
-                    {AtSquareUpData1.map((data, index) => (
-                        <NumberCard
-                            key={index}
-                            number={data.number}
-                            title={data.title}
-                            desc={data.desc}
-                        />
-                    ))}
-                </div>
+        <div>
+            <div className='sb-container'>
+                {visibleItems.map((data, index) => (
+                    <NumberCard
+                        key={index}
+                        number={data.number}
+                        title={data.title}
+                        desc={data.desc}
+                    />
+                ))}
             </div>
-        </>
-    )
+
+            {atSqerUpData.length > 4 && (
+                <div style={{ textAlign: 'center', marginTop: 20 }}>
+                    <button
+                        className="sb-show-more-btn"
+                        onClick={() => setShowMore(prev => !prev)}
+                    >
+                        {showMore ? 'show less ▲' : 'show more ▼'}
+                    </button>
+                </div>
+            )}
+        </div>
+    );
 }
-export default AtSquareUpSection
+
+export default AtSquareUpSection;

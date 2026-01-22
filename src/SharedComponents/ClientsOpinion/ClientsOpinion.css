@@ -1,0 +1,250 @@
+
+.sb-clients {
+    margin-left: 163px;
+    margin-right: 161px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sb-ClientCard {
+    width: 50%;
+    height: 532px;
+    padding: 100px 80px;
+    border: 1px var(--color-background) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.sb-ClientCard h3 {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--color-aboutus-text);
+}
+
+.sb-description {
+    padding-top: 24px;
+    font-family: Barlow;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-p);
+}
+.sb-container-Profile {
+    margin-top: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px var(--color-background) solid;
+    background-color: var(--color-sbCard);
+    border-radius: 8px;
+}
+
+.sb-profile {
+    display: flex;
+    gap: 18px;
+    align-items: end;
+    font-family: Barlow;
+    line-height: 150%;
+}
+
+.sb-profile .sb-client-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-p);
+}
+
+.sb-profile .sb-client-name {
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-titles);
+}
+
+.sb-button {
+    padding: 18px 20px;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    border-radius: 8px;
+    color: var(--color-titles);
+    background-color: var(--color-background);
+    cursor: pointer;
+    border: none;
+}
+
+.sb-button:hover {
+    background-color: var(--color-rarbackground);
+}
+
+.sb-slider {
+    margin-left: 80px;
+    margin-right: 81px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 32px;
+}
+
+.sb-slider-track {
+    display: flex;
+    transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: transform;
+}
+
+.sb-slider-item {
+    flex: 0 0 calc(100% / var(--visible-cards));
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.sb-slider-item .sb-ClientCard {
+    width: 100% !important;
+}
+
+.sb-slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.sb-slider-btn {
+    min-width: 56px;
+    min-height: 44px;
+    padding: 8px 14px;
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1919px) {
+    .sb-clients {
+    margin-left: 80px;
+    margin-right: 80px;
+    }
+    .sb-ClientCard {
+        width: 50%;
+        /* height: 420px; */
+        padding: 80px 60px;
+        gap:20px;
+    }
+    .sb-ClientCard h3{
+        font-size: 20px;
+    }
+    .sb-description {
+    padding-top: 20px;
+    font-size: 16px;
+    }
+    .sb-container-Profile {
+    padding: 14px;
+    }
+    .sb-profile {
+    gap: 12px;
+    }
+    .sb-profile .sb-client-text {
+        font-size: 14px;
+    }
+    .sb-profile .sb-client-name{
+        font-size: 16px;
+    }
+    .sb-button {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    }
+}
+@media (max-width: 992px){
+    .sb-slider {
+            margin-left: 20px;
+    margin-right: 20px;
+    }
+    .sb-ClientCard {
+        width: 100%;
+        height: 420px;
+        padding: 48px 28px;
+        gap:28px;
+        border-radius: 14px;
+    }
+    .sb-clients {
+    margin-left: 18px;
+    margin-right: 18px;
+    }
+    .sb-ClientCard h3{
+        font-size: 18px;
+    }
+    .sb-description {
+    font-size: 14px;
+    }
+    .sb-container-Profile {
+    padding: 16.5px 14px;
+    }
+    .sb-profile {
+    gap: 10px;
+    }
+}
+@media (max-width: 1200px) {
+    .sb-clients,
+    .sb-slider {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+        .sb-profile {
+    gap: 10px;
+    }
+    .sb-profile .sb-client-text {
+        font-size: 12px;
+    }
+    .sb-profile .sb-client-name{
+        font-size: 14px;
+    }
+    .sb-button {
+    padding: 10px 10px;
+    }
+} 
+@media (max-width: 600px) {
+    .sb-ClientCard .sb-button {
+        display: none;
+    }
+}
+@media (max-width: 390px) {
+    .sb-slider {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-bottom: 20px;
+    }
+
+    .sb-clients {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .sb-ClientCard {
+        width: 100%;
+        padding: 40px 24px;
+        gap: 24px;
+        border-radius: 12px;
+    }
+
+    .sb-ClientCard h3 {
+        font-size: 18px;
+    }
+
+    .sb-description {
+        font-size: 14px;
+    }
+
+    .sb-container-Profile {
+        padding: 16.5px 14px;
+    }
+
+    .sb-profile {
+        gap: 10px;
+    }
+}

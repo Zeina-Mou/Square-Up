@@ -5,7 +5,7 @@ function CardContainer({ number, title, desc }) {
     return (
         <>
             <div className='sb-Card'>
-                <div className='sb-content-card'>
+                <div className=''>
                     <div className='sb-TextContainer'>
                         <h2>{number}</h2>
                         <div className='sb-title'>
