@@ -2,7 +2,7 @@ import './HeaderSection.css';
 
 const HeaderSection = ({ title, description, image }) => {
     return (
-        <section className="ze-hero-container">
+        <section className="ze-hero-container main-margin">
             <div 
                 className="ze-hero-bg-image" 
                 style={{ backgroundImage: `url(${image})` }}

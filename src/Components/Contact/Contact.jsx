@@ -30,7 +30,7 @@ const ContactForm = () => {
     }
 
     return (
-        <form ref={formRef} className='G-H_FormContact' onSubmit={saveUser}>
+        <form ref={formRef} className='G-H_FormContact main-margin' onSubmit={saveUser}>
             <div className="G-H_NameEmail">
                 <div className="G-H_Name">
                     <label htmlFor="name">Full Name</label>

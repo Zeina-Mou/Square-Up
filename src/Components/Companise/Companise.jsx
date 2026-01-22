@@ -3,7 +3,7 @@ import './Companise.css'
 function Companise() {
     return (
     <>
-        <section className="trusted-companies">
+        <section className="main-margin trusted-companies">
                 <div className="trusted-title-box">
                     <p className="trusted-title">Trusted By 250+ Companies</p>
                 </div>

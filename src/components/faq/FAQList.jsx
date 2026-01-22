@@ -17,7 +17,7 @@ fetch("/Square-Up/data/data.json")
   const secondColumn = faqData.slice(4, 8);
 
   return (
-    <div className="kh-faq-container">
+    <div className="kh-faq-container main-margin">
       <div className="kh-faq-column">
         {firstColumn.map((item, index) => (
           <FAQItem

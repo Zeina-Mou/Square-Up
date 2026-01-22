@@ -13,6 +13,15 @@
     --color-text: #FDFFFA;
     --color-titles: #FFFFFF;
     --color-p: #E6E6E6;
+    /* Margin on Disktop */
+    --main-Hmargin-Dscreen: 10.125rem;
+    /* --main-margin-left-Dscreen: 10.125rem; */
+    /* Margin on Laptop */
+    --main-Hmargin-Lscreen: 5rem;
+    /* --main-margin-left-Lscreen: 5rem; */
+    /* Margin on Mobile */
+    /* --main-margin-right-Mscreen: 1rem; */
+    --main-Hmargin-Mscreen: 1rem;
 }
 
 * {
@@ -24,9 +33,25 @@
 
 body {
   background-color: var(--color-body);
-  
 }
-
+.main-margin {
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
+}
+/* Main Margin On Laptop */
+@media (max-width: 1440px) {
+  .main-margin {
+      margin-right: var(--main-Hmargin-Lscreen);
+      margin-left: var(--main-Hmargin-Lscreen);
+    }
+}
+/* Main Margin On Mobile */
+@media (max-width: 992px) {
+  .main-margin {
+      margin-right: var(--main-Hmargin-Mscreen);
+      margin-left: var(--main-Hmargin-Mscreen);
+    }
+}
 a {
   text-decoration: none;
   color: var(--color-titles);
