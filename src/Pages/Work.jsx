@@ -1,11 +1,9 @@
 import ContactSection from "../SharedComponents/ContactSection/ContactSection"
-import WorksCards from "../SharedComponents/WorksCards/WorksCards"
 import { useEffect, useState } from "react";
-
+import Worklist from "../SharedComponents/Worklist/Worklist";
 
 const Work = () => {
   const [works, setwork] = useState([]);
-  const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     fetch('assets/data/works.json')
       .then(res => res.json())
@@ -13,25 +11,9 @@ const Work = () => {
       .catch(err =>
         console.error("error loading work", err));
   }, []);
-  const visibleCards = showAll ? works : works.slice(0, 4);
   return (
     <>
-      <div className="rb-flex-works">
-        {visibleCards.map((card, index) => {
-          return (
-            <WorksCards key={index} firstTitel={card.firstTitel} picther={card.picther} secondTitel={card.secondTitel} link={card.link} icon={card.icon} paragraph={card.paragraph} />
-          )
-        })}
-      </div>
-      <div style={{ textAlign: 'center', margin: '40px 0' }}>
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="toggle-btn"
-        >
-          {showAll ? 'show less' : 'show more'}
-        </button>
-      </div>
-
+      <Worklist works={works} />
       <ContactSection
         image="assets/img/home/squares.png"
         photo="assets/img/home/thank.png"
@@ -43,5 +25,4 @@ const Work = () => {
     </>
   )
 }
-
 export default Work
