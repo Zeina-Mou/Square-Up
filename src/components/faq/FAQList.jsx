@@ -31,6 +31,7 @@ const FAQList = () => {
     <>
       <div className="kh-faq-container">
         {/* العمود الأول */}
+          <span className="kh-middle-line"></span>
         <div className="kh-faq-column">
           {firstColumn.map((item, index) => (
             <FAQItem

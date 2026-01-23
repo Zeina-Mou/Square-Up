@@ -18,9 +18,10 @@ const FAQItem = ({ number, question, answer }) => {
           <h3 className={isOpen ? "active" : ""}>{question}</h3>
         </div>
 
-        <button className="kh-toggle-btn">
-          {isOpen ? "×" : "+"}
-        </button>
+    <button className={`kh-toggle-btn ${isOpen ? "active" : ""}`}>
+  {isOpen ? "×" : "+" }
+</button>
+
       </div>
 
       <div className={`kh-faq-p ${isOpen ? "open" : ""}`}>
