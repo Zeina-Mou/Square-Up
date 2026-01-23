@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Cta = () => {
     return (
         // عمل كمبوننت مشترك لل cta في قسمي ال content & about
-        <div className='rb-cta'>
+        <div className='rb-cta main-margin'>
             <div className='rb-ctaflex'>
                 <div className='image-shadow'></div>
                 <div><h2>Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....</h2>

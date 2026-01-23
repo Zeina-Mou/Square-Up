@@ -4,7 +4,7 @@ import './ContactSection.css'
 const ContactSection = ({ image, photo, logo, text, paragraph, button }) => {
     return (
         //  تنسيق خلفية بألوان داكنةو كتابة كومبننت مشترك لل cta
-        <div className="Contact-Section">
+        <div className="Contact-Section main-margin">
             <div className="rb-bg" style={{
                 backgroundImage: `url(${image}), url(${photo}) `
                 , backgroundRepeat: "repeat, no-repeat", backgroundSize: "auto, cover", backgroundPosition: "center", filter: "grayscale(100%) brightness(0.3)", minHeight: "400px"

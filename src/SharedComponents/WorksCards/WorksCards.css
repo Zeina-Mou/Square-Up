@@ -1,16 +1,15 @@
 .rb-flex-works {
-    width: 100%;
+    width: 88%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .rb-cardwork {
     width: 50%;
-    height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     color: var(--color-p);
     padding-bottom: 80px;
     border: 1px solid rgba(63, 62, 62, 0.637);

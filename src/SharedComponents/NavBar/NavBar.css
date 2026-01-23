@@ -1,7 +1,7 @@
 .navbar {
     background-color: var(--color-body);
     border-bottom: 1px solid var(--color-background);
-    padding: 1.25rem 5rem;
+    padding: 1.25rem 10.125rem ;
 
     .navbar-container {
         display: flex;
@@ -12,28 +12,28 @@
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 6.86px;
+            gap: 0.43rem;
 
             .logo-img {
-                width: 2.5rem;
+                width: 3.75rem;
             }
 
             .logo-text {
                 font-weight: 600;
-                font-size: 1.25rem;
+                font-size: 1.55rem;
                 color: var(--color-titles);
             }
         }
 
         .nav-menu {
             display: flex;
-            gap: 1.5rem;
+            gap: clamp(0.8rem, 1.5vw, 1.5rem);
 
             .nav-link {
-                font-size: 0.9rem;
+                font-size: 1.125rem;
                 line-height: 150%;
                 color: var(--color-p);
-                padding: 0.75rem 1.25rem;
+                padding: 0.875rem 1.75rem;
                 border-radius: 8px;
                 transition: 0.3s;
                 font-weight: 500;
@@ -54,9 +54,9 @@
             background-color: var(--button-color);
             color: var(--color-background);
             font-weight: 500;
-            padding: 0.8rem 1.2rem;
+            padding: 1rem 1.5rem;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: 1.125rem;
             line-height: 150%;
             transition: 0.3s;
 
@@ -68,16 +68,41 @@
 
         .mobile-toggle {
             display: none;
-            padding: 14.5px 10.25px;
+            padding: 0.91rem 0.64rem;
             border-radius: 6px;
             background-color: var(--color-background);
         }
     }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
     .navbar {
-        padding: 1.25rem 1rem;
+        padding: 1.375rem 5rem;
+        .navbar-container {
+            .logo-section {
+                .logo-img {
+                    width: 2.5rem;
+                }
+                .logo-text {
+                    font-size: 1.13rem;
+                }
+            }
+            .contact-btn {
+            font-size: 0.875rem;
+            padding: 0.75rem 1.125rem;
+            }
+        .nav-menu {
+            .nav-link {
+                font-size: 0.875rem;
+                padding: 0.75rem 1.375rem;
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width: 992px) {
+    .navbar {
+        padding: 1.44rem 1rem;
         .navbar-container {
             position: relative;
             .mobile-toggle {
@@ -86,7 +111,7 @@
 
             .nav-menu {
                 position: absolute;
-                top: 147%;
+                top: 140%;
                 left: 0;
                 width: 100%;
                 background-color: var(--color-body);
@@ -96,9 +121,10 @@
                 transform: translateX(-150%);
                 transition: 0.4s ease-in-out;
                 border-bottom: 1px solid var(--color-background);
+                z-index: 100;
 
                 &.open {
-                    transform: translateY(0);
+                    transform: translateX(0);
                 }
             }
 

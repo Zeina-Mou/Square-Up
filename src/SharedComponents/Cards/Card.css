@@ -55,22 +55,22 @@ button:hover {
 }
 
 .rb-cards {
-    width: 100%;
+/*     width: 100%; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
 .rb-type2 {
-    width: calc(100% /2);
+    width: calc(88% /2 );
     min-height: 292px;
 
 
 }
 
 .rb-type3 {
-    width: calc(100% /3);
+    width: calc(88% /3);
 }
 
 

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import './NavBar.css';
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -18,7 +18,7 @@ function NavBar() {
       <div className="navbar-container">
         <Link to="/" className="logo-section">
           <img src="assets/img/home/SquareUp_logo.png" alt="SquareUp" className="logo-img" />
-          <span className="logo-text">SquareUp</span>
+          <h1 className="logo-text">SquareUp</h1>
         </Link>
 
         <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle Menu">

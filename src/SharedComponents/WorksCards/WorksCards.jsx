@@ -4,7 +4,7 @@ import './WorksCards.css'
 const WorksCards = ({ firstTitel, picther, secondTitel, link, icon, paragraph }) => {
     return (
         <>
-            <div className='rb-cardwork'>
+            <div className='rb-cardwork '>
                 <div ><h2 className='rb-firstTitel'>{firstTitel}</h2></div>
                 <img src={picther} className='rb_picther'></img>
                 <div className='rb-sectitel'>
