@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
-        <div className="hero-section">
+        <div className="hero-section main-margin">
             {/* Squares */}
             <div className="grid-pattern"></div>
         

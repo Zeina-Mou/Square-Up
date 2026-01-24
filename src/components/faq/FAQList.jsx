@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react"
-import FAQItem from "./FAQItem"
-import "./FAQList.css"
+import { useEffect, useState } from "react";
+import FAQItem from "./FAQItem";
+import "./FAQList.css";
 
 const FAQList = () => {
   const [faqData, setFaqData] = useState([]);
   const [showAll, setShowAll] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 992);
 
+  // جلب البيانات
   useEffect(() => {
     fetch("/Square-Up/data/data.json")
       .then((res) => res.json())
@@ -28,35 +29,34 @@ const FAQList = () => {
   const secondColumn = faqData.slice(4, 8);
 
   return (
-    <>
-      <div className="kh-faq-container">
-        {/* العمود الأول */}
-          <span className="kh-middle-line"></span>
+    <div className="kh-faq-container main-margin">
+      <span className="kh-middle-line"></span>
+
+      {/* العمود الأول */}
+      <div className="kh-faq-column">
+        {firstColumn.map((item, index) => (
+          <FAQItem
+            key={item.id}
+            number={String(index + 1).padStart(2, "0")}
+            question={item.question}
+            answer={item.answer}
+          />
+        ))}
+      </div>
+
+      {/* العمود الثاني */}
+      {(showAll || isLargeScreen) && (
         <div className="kh-faq-column">
-          {firstColumn.map((item, index) => (
+          {secondColumn.map((item, index) => (
             <FAQItem
               key={item.id}
-              number={String(index + 1).padStart(2, "0")}
+              number={String(index + 5).padStart(2, "0")}
               question={item.question}
               answer={item.answer}
             />
           ))}
         </div>
-
-        {/* العمود الثاني */}
-        {(showAll || isLargeScreen) && (
-          <div className="kh-faq-column">
-            {secondColumn.map((item, index) => (
-              <FAQItem
-                key={item.id}
-                number={String(index + 5).padStart(2, "0")}
-                question={item.question}
-                answer={item.answer}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      )}
 
       {/* زر عرض المزيد – يظهر فقط على الموبايل */}
       {!isLargeScreen && (
@@ -69,7 +69,7 @@ const FAQList = () => {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

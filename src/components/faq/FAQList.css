@@ -5,8 +5,8 @@ body{
 .kh-faq-container {
   position: relative;
   display: flex;
-  width: 90%;
-  margin-left: 60px;
+  width: 74.5%;
+  /* margin-left: 60px; */
   margin-top: 80px;
   background-color: var(--color-body);
     margin-bottom: 80px;
@@ -54,10 +54,10 @@ body{
 }
 
 
-.kh-faq-column:first-child {
+/* .kh-faq-column:first-child {
   border-right: 1px solid var(--color-rarbackground);
 
-}
+} */
 
 
 .kh-toggle-btn.active {
@@ -110,7 +110,7 @@ body{
 }
 
 .kh-faq-header h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--color-titles);
   font-weight: 400;
   margin: 0;
@@ -120,7 +120,7 @@ body{
   background: none;
   border: none;
   color: var(--color-titles);
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -154,12 +154,15 @@ color: var( --color-p);
 
 }
 
-
+.main-margin {
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
+}
 .kh-faq-p.open {
   max-height: 300px;
   opacity: 1;
   transform: translateY(0);
-  
+  margin-top: 10px;
 }
 
 .kh-show-more-wrapper {
@@ -211,9 +214,9 @@ color: var( --color-p);
   }
 }
 
-@media (max-width: 1044px) {
+@media (max-width: 1440px) {
   .kh-faq-container {
-    width: 95%;
+    width: 77.5%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -235,14 +238,19 @@ color: var( --color-p);
   .kh-faq-p {
     padding-left: 55px;
   }
+
+  .main-margin {
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
+}
 }
 
 
 @media (max-width: 992px) {
   .kh-faq-container {
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+   align-items: center;
+   max-width: 68%;
   }
 
   .kh-faq-column:first-child {
@@ -267,13 +275,18 @@ color: var( --color-p);
     font-size: 14px;
   }
 
-  .kh-faq-p {
+  /* .kh-faq-p {
     padding-left: 48px;
-  }
+  } */
 
   .kh-faq-container::before,
   .kh-faq-container::after,
   .kh-middle-line {
     display: none;
   }
+.main-margin {
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
+}
+
 }
