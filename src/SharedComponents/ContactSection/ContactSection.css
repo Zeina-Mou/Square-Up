@@ -1,11 +1,39 @@
 .Contact-Section{
-    height: 100vh;
     width: 88%;
+    height: 100vh;
     margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin: 0 auto;
-
-
+}
+.rb-bg-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    /* grayscale(100%) removes original image colors to adopt the theme color */
+    filter: grayscale(100%) brightness(0.6) contrast(1.1);
+    opacity: 89%;
+    z-index: 1;
+}
+.rb-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/home/squares.png');
+    background-repeat: repeat;
+    /* mix-blend-mode: overlay allows the pattern to react to the background light */
+    mix-blend-mode: overlay;
+    opacity: 90%;
+    z-index: 2;
 }
 .rb-bg{
     height: 100vh;
@@ -16,8 +44,9 @@
     align-items: center;
     text-align: center;
     position: absolute;
-    top: 20%;
-    right: 4%;
+    z-index: 3;
+    /* top: 20%;
+    right: 4%; */
 .rb-shadow{
         width: 8vw;
         height: 8vw;
@@ -53,10 +82,10 @@
     } 
 }
 @media (max-width: 992px) {
+    .Contact-Section{
+        height: 50vh;
+    }
     .rb-style{
-            position: absolute;
-            top: 5%;
-            right: 2%;
         .rb-shadow{
         width: 4.5vh;
         height: 4.5vh;

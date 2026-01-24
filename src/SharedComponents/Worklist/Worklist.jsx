@@ -6,7 +6,7 @@ const Worklist = ({ works }) => {
     const visibleCards = showAll ? works : works.slice(0, 4);
     return (
         <>
-            <div className="rb-flex-works">
+            <div className="rb-flex-works main-margin">
                 {visibleCards.map((card, index) => {
                     return (
                         <WorksCards key={index} firstTitel={card.firstTitel} picther={card.picther} secondTitel={card.secondTitel} link={card.link} icon={card.icon} paragraph={card.paragraph} />

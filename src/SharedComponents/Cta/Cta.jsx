@@ -11,7 +11,7 @@ const Cta = () => {
                 </div>
             </div>
             <div className='rb-ctaflex rb-container'>
-                <h3>Welcome to SquareUp <span>Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.</span> </h3>
+                <h3>Welcome to SquareUp <p>Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.</p> </h3>
                 <Link to="/contact"><button>Start Project</button></Link>
 
             </div>

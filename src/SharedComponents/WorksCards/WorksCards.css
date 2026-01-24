@@ -1,9 +1,8 @@
 .rb-flex-works {
-    width: 88%;
+    /* width: 100%; */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
 }
 
 .rb-cardwork {
@@ -82,7 +81,18 @@
     background-color: var(--color-rarbackground);
     border-radius: 6px;
 }
-
+@media (min-width: 1440px) {
+    .rb-firstTitel{
+        font-size: 26px;
+    }
+    .rb-sectitel{
+        font-size: 24px;
+    }
+    .rb-p-work{
+        font-size: 18px;
+    }
+    
+}
 
 @media (max-width: 992px) {
     .rb-flex-works {
@@ -97,6 +107,9 @@
             font-size: 12px;
         }
 
+    }
+    .rb-icon-link{
+        margin-top: 45px;
     }
 
     .rb-sectitel {

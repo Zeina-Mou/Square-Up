@@ -3,7 +3,7 @@ import Cards from "../Cards/Card"
 const HomeCard2 = ({ cardchoose }) => {
     return (
         <div>
-            <div className='rb-cards'>
+            <div className='rb-cards main-margin'>
                 {cardchoose.map((cardv, index) => {
                     return (
                         <Cards key={index}

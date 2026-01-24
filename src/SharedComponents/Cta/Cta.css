@@ -16,11 +16,11 @@
     align-items: center;
     gap: 20px;
     .image-shadow{
-        width: 25vh;
-        height: 15vh;
+        width: 15vw;
+        height: 8vw;
         background-image: url("assets/img/about/SquareUp_logo.png");
         background-color: var(--button-color);
-        background-size: auto;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         box-shadow: inset 0 0 23px 5px rgba(255, 255, 255, 0.856);
@@ -56,15 +56,38 @@
         font-weight: 400;
         font-size: 16px;
         margin: 24px 0;
-        span{
+        p{
+            display: inline-block;
             color: var(--color-p);
             font-size: 14px;
             font-weight: 400;
             background-color: #80808031;
             padding: 10px 14px;
             border-radius: 6px;
+            line-height: 150%;
         }
     }
+@media (min-width: 1440px) {
+    .rb-container{
+        p{
+            font-size: 20px;
+        }
+    }
+    .rb-ctaflex{
+        button{
+            padding: 18px 34px;
+            font-size: 18px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        h4{
+            font-size: 18px;
+        }
+    }
+}
+
+
 @media (max-width: 992px) {
     .rb-ctaflex{
         display: block;
@@ -74,8 +97,8 @@
         }
         .image-shadow{
             margin: 10px auto;
-            width: 25vw;
-            height: 8vh;
+            width: 20vw;
+            height: 18vw;
         }
     }
     .rb-container{
