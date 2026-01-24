@@ -12,6 +12,11 @@ const Contact = () => {
         image={"assets/img/contact/hero.png"}
       />
       <ContactForm />
+      <HeaderSection
+        title="Frequently Asked Questions"
+        description="Still you have any questions? Contact our Team via hello@squareup.com"
+        image={"assets/img/home/frequently.png"}
+      />
       <FAQList/>
       <Cta />
     </>
