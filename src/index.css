@@ -31,9 +31,6 @@
   font-family: "Barlow", sans-serif;
 }
 
-body {
-  background-color: var(--color-body);
-}
 .main-margin {
     margin-right: var(--main-Hmargin-Dscreen);
     margin-left: var(--main-Hmargin-Dscreen);

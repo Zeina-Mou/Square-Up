@@ -1,3 +1,4 @@
+import Cta from "../SharedComponents/Cta/Cta"
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import FAQList from "../components/faq/FAQList"
 import ContactForm from "../Components/Contact/Contact"
@@ -17,6 +18,7 @@ const Contact = () => {
         image={"assets/img/home/frequently.png"}
       />
       <FAQList/>
+      <Cta />
     </>
   )
 }

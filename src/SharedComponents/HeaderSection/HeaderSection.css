@@ -1,7 +1,7 @@
 /* Defines the main container that sets the section's height, centering, and primary theme color */
 .ze-hero-container {
     position: relative;
-    height: 17.5rem;
+    height: 21rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,8 +51,17 @@
 }
 
 @media (max-width: 1440px) {
+    .ze-hero-container {
+        height: 17.5rem;
+    }
     .ze-hero-content {
         max-width: 780px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ze-hero-container {
+        height: 13.25rem;
     }
 }
 /* Stylizes the main title with bold weight and appropriate spacing */

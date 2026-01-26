@@ -8,7 +8,8 @@ import Contact from './Pages/Contact'
 import NavBar from './SharedComponents/NavBar/NavBar'
 import Footer from './SharedComponents/Footer/Footer'
 
-function App() {
+function App() { 
+
   return (
     <>
       <NavBar />
