@@ -1,10 +1,11 @@
 import "./Title.css"
 
-function Title({ title, desc1, desc2 }) {
+function Title({ title, desc1, desc2,MIDpaddingOurH2 , MINpaddingOurH2 ,paddingOurH2 }) {
     return (
         <>
             <div className='sb-title-sec'>
-                <h2>{title}</h2>
+                <div className="sb-borderTitle">
+                <h2 className={`${MIDpaddingOurH2 } ${MINpaddingOurH2} ${paddingOurH2}`}>{title}</h2>
                 {desc1 ? (
                     <p className="sb-desc1-sec">{desc1}</p>
                 ) : null}
@@ -14,6 +15,7 @@ function Title({ title, desc1, desc2 }) {
                         <p>{desc2}</p>
                     </div>
                 ) : null}
+                </div>
             </div>
         </>
     )

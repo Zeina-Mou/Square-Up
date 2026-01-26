@@ -27,6 +27,8 @@ function OurStorySection() {
                         number={data.number}
                         title={data.title}
                         desc={data.desc}
+                        titleColor="title-Color"
+                    
                     />
                 ))}
             </div>

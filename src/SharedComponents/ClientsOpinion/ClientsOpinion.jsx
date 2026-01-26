@@ -21,11 +21,10 @@ function ClientsOpinion() {
     }, []);
 
     function getVisibleCards(width) {
-        if (width < 992) return 1;       
-        if (width < 1441 && width > 991) return 2;    
-        return 9;                    
+        if (width <= 992) return 1;       
+        if (width <= 1440) return 2;    
+        return 6;                    
     }
-
 
     useEffect(() => {
         const onResize = () => {

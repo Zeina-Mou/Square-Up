@@ -1,8 +1,12 @@
 .sb-title-sec {
-    margin-left: 162px;
-    margin-right: 162px;
+    margin-left: var(--main-Hmargin-Dscreen);
+    margin-right: var(--main-Hmargin-Dscreen);
 }
-
+.sb-borderTitle{
+    /* padding-bottom: 80px; */
+    border: 1px var(--color-background) solid;
+    margin-bottom: 0px;
+}
 .sb-title-sec h2 {
     padding: 120px 50px 0px;
     font-family: Barlow;
@@ -11,7 +15,9 @@
     line-height: 100%;
     color: var(--color-titles);
 }
-
+.sb-title-sec .padding-OurH2{
+    padding: 100px 50px ;
+}
 .sb-title-sec .sb-desc1-sec {
     padding: 14px 0px 40px 50px;
     max-width: 1100px;
@@ -25,7 +31,9 @@
 
 .sb-title-sec .sb-desc2-sec {
     margin-left: 50px;
+    margin-bottom: 80px;
     width: 420px;
+    font-size: 22px;
     padding: 12px 14px;
     border-radius: 6px;
     background-color: var(--color-background);
@@ -34,23 +42,27 @@
 
 @media (max-width: 1440px) {
     .sb-title-sec {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left:var(--main-Hmargin-Lscreen);
+        margin-right: var(--main-Hmargin-Lscreen);
     }
 
     .sb-title-sec h2 {
-        padding-left: 40px;
+        padding:80px 40px 0px;
         font-size: 38px;
+    }
+    .sb-title-sec .mid-padding{
+        padding:80px  50px;
     }
 
     .sb-title-sec .sb-desc1-sec {
-        max-width: 930px;
+        max-width: 979px;
         padding: 10px 0px 40px 40px;
         font-size: 16px;
     }
 
     .sb-title-sec .sb-desc2-sec {
         margin-left: 40px;
+        margin-bottom: 40px;
         width: 341px;
         border-radius: 6px;
         padding: 10px;
@@ -59,17 +71,20 @@
 }
 @media (max-width: 992px) {
     .sb-title-sec {
-        margin-left: 32px;
-        margin-right: 32px;
+        margin-left: var(--main-Hmargin-Mscreen);
+        margin-right: var(--main-Hmargin-Mscreen);
     }
 
     .sb-title-sec h2 {
-        padding: 40px 16px 0px;
+        padding:40px 16px 0px;
         font-size: 28px;
+    }
+    .sb-title-sec .min-padding{
+        padding:40px 24px;
     }
 
     .sb-title-sec .sb-desc1-sec {
-        max-width: 326px;
+        
         padding: 6px 16px 30px;
         font-size: 14px;
     }

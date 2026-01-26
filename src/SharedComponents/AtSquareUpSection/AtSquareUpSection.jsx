@@ -30,15 +30,17 @@ function AtSquareUpSection() {
             </div>
 
             {atSqerUpData.length > 4 && (
-                <div style={{ textAlign: 'center', marginTop: 20 }}>
+                <div style={{ textAlign: 'center', marginTop: 10 }}>
                     <button
-                        className="sb-show-more-btn"
+                        className={`sb-show-more-btn ${showMore ? 'active' : ''}`}
                         onClick={() => setShowMore(prev => !prev)}
                     >
-                        {showMore ? 'show less ▲' : 'show more ▼'}
+                        {showMore ? 'Show less' : 'Show more'}
+                        <span className="arrow"></span>
                     </button>
                 </div>
             )}
+
         </div>
     );
 }

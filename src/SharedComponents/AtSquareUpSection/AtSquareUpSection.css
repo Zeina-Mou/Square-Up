@@ -1,8 +1,7 @@
 
 .sb-container {
-    margin-left: 162px;
-    margin-right: 162px;
-    margin-top: 100px;
+    margin-left: var(--main-Hmargin-Dscreen);
+    margin-right: var(--main-Hmargin-Dscreen);
     display: flex;
     flex-wrap: wrap;
 }
@@ -42,17 +41,55 @@
 
 .sb-desc {
     margin-top: 50px;
+    max-width:698px;
     font-family: Inter;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: var(--color-footer-link);
 }
+.sb-TextContainer .title-Color{
+    color: var(--color-aboutus-text);
+}
+
+.sb-show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 28px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 150%;
+    border-radius: 10px;
+    color: var(--color-titles);
+    background-color: var(--color-background);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sb-show-more-btn:hover {
+    background-color: var(--color-rarbackground);
+    transform: translateY(-2px);
+}
+
+.arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.sb-show-more-btn.active .arrow {
+    transform: rotate(-135deg); 
+}
 
 @media (max-width: 1440px) {
     .sb-container {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: var(--main-Hmargin-Lscreen);
+        margin-right: var(--main-Hmargin-Lscreen);
     }
 
     .sb-Card {
@@ -79,21 +116,16 @@
     }
 }
 
-
 @media (max-width: 992px) {
     .sb-container {
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: var(--main-Hmargin-Mscreen);
+        margin-right: var(--main-Hmargin-Mscreen);
     }
 
     .sb-Card {
         width: 100%;
         padding: 40px 24px;
     }
-
-    /* .sb-content-card {
-        margin: 40px 24px;
-    } */
 
     .sb-TextContainer {
         h2 {
@@ -114,15 +146,4 @@
         font-size: 14px;
     }
 }
-.sb-show-more-btn {
-    padding: 18px 20px;
-    font-family: Barlow;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
-    border-radius: 8px;
-    color: var(--color-titles);
-    background-color: var(--color-background);
-    cursor: pointer;
-    border: none;
-}
+
