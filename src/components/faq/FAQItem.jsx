@@ -10,6 +10,8 @@ const FAQItem = ({ number, question, answer }) => {
         className="kh-faq-header"
         onClick={() => setIsOpen(!isOpen)}
       >
+
+        {/* تغيير لون السؤال ورقمه عند الفتح */}
         <div className="kh-left">
           <span className={`kh-faq-number ${isOpen ? "active" : ""}`}>
             {number}
@@ -17,7 +19,7 @@ const FAQItem = ({ number, question, answer }) => {
 
           <h3 className={isOpen ? "active" : ""}>{question}</h3>
         </div>
-
+{/* تغيير شكل الاشارة عند الضغط وتغيير لونها*/}
     <button className={`kh-toggle-btn ${isOpen ? "active" : ""}`}>
   {isOpen ? "×" : "+" }
 </button>

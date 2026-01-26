@@ -1,15 +1,14 @@
 
-body{
-  background-color: var(--color-background);
-}
+
 .kh-faq-container {
+   background-color: var(--color-background);
   position: relative;
   display: flex;
-  width: 74.5%;
+   width: calc(100% - (var(--main-Hmargin-Dscreen) * 2));
   /* margin-left: 60px; */
-  margin-top: 80px;
+  margin-top: 60px;
   background-color: var(--color-body);
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 
@@ -18,8 +17,8 @@ body{
 .kh-faq-container::after {
   content: "";
   position: absolute;
-  top: -80px;      /* يمتد للسيكشن اللي فوق */
-  bottom: -80px;   /* يمتد للسيكشن اللي تحت */
+  top: -60px;      /* يمتد للسيكشن اللي فوق */
+  bottom: -60px;   /* يمتد للسيكشن اللي تحت */
   width: 1px;
   background-color: var(--color-rarbackground);
   pointer-events: none;
@@ -37,8 +36,8 @@ body{
 
 .kh-faq-container .kh-middle-line {
   position: absolute;
-  top: -80px;
-  bottom: -80px;
+  top: -60px;
+  bottom: -60px;
   left: 50%;
   width: 1px;
   background-color: var(--color-rarbackground);
@@ -113,7 +112,8 @@ body{
   font-size: 14px;
   color: var(--color-titles);
   font-weight: 400;
-  margin: 0;
+  width: 350px;
+
 }
 
 .kh-toggle-btn {
@@ -191,7 +191,7 @@ color: var( --color-p);
   .kh-faq-container {
     flex-direction: column;
     border-bottom: none;
-    margin-right: 10px;
+
   }
  .kh-show-more-wrapper {
     display: block;
@@ -215,11 +215,7 @@ color: var( --color-p);
 }
 
 @media (max-width: 1440px) {
-  .kh-faq-container {
-    width: 77.5%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
 
   .kh-faq-item {
     padding: 24px;
@@ -250,7 +246,7 @@ color: var( --color-p);
   .kh-faq-container {
     flex-direction: column;
    align-items: center;
-   max-width: 68%;
+  width: calc(100% - (var(--main-Hmargin-Dscreen) * 2));
   }
 
   .kh-faq-column:first-child {
@@ -275,9 +271,7 @@ color: var( --color-p);
     font-size: 14px;
   }
 
-  /* .kh-faq-p {
-    padding-left: 48px;
-  } */
+
 
   .kh-faq-container::before,
   .kh-faq-container::after,
@@ -290,3 +284,54 @@ color: var( --color-p);
 }
 
 }
+/* Media query للشاشات أقل من 390px */
+@media (max-width: 390px) {
+
+  .kh-faq-container {
+    /* استخدام كامل العرض */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.kh-faq-column:nth-child(2) {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* .kh-faq-column {
+    width: 100%;
+  } */
+
+  .kh-faq-item {
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+
+  .kh-faq-number {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .kh-faq-header h3 {
+    font-size: 13px;
+    width: 200px; /* أصغر عرض للنصوص */
+  }
+
+  .kh-faq-p {
+    padding-left: 40px; /* أصغر مسافة للنصوص الداخلية */
+  }
+
+  .kh-show-more-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+
+
+

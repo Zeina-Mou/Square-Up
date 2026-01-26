@@ -1,150 +1,188 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-margin {
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
 }
-
-
-body {
-  background-color: var(--color-body, #1A1A1A);
-  min-height: 100vh;
-  font-family: 'barlow4', sans-serif;
-  overflow-x: hidden; 
-}
-
 
 .ksh-about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--color-titles);
-margin-left: 150px;
-margin-right: 150px;
-margin-top: 80px;
-margin-bottom: 80px;
-  /* min-height: 100vh; */
-  max-width: 100%; 
-
-  gap: 100px;
-
+    background-color: var(--color-body, #1A1A1A);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-titles);
+    margin-top: 80px;
+    margin-bottom: 80px;
+    gap: clamp(30px, 6vw, 120px); 
+}
+.ksh-about-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(30px, 6vw, 120px);
+    max-width: 1400px;  
+    margin: 0 auto;     
 }
 
 
 .ksh-about-content {
-  width: 598px;
+    width: 550px;
+    max-width: 50%; /
 }
 
 .ksh-about-content h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: var(--color-titles);
+    font-size: clamp(20px, 2vw, 32px);
+    margin-bottom: 20px;
 }
 
 .ksh-about-content p {
-  font-size: 20px;
-  line-height: 1.7;
-  color: var(--color-p, );
+    font-size: clamp(14px, 1.2vw, 20px);
+    line-height: 1.2;
   
 }
 
-
 .ksh-about-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .ksh-visual-box {
-  position: relative;
-  width: 360px;
-  height: 360px;
-  border-radius: 16px;
-  overflow: hidden;
+    position: relative;
+    width: clamp(280px, 35vw, 680px); 
+    aspect-ratio: 1/1; 
+    border-radius: 16px;
+    overflow: hidden;
 }
-
 
 .ksh-visual-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.4) grayscale(100%);
-  z-index: 1;
-}
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.2) 
+       drop-shadow(0 0 25px rgba(158, 255, 0, 0.8))
+            drop-shadow(0 0 60px rgba(158, 255, 0, 0.4));;
+    z-index: 1;
+   
 
+}
 
 .ksh-visual-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: url("/assets/img/about/squares.png");
-  background-repeat: repeat;
-  background-size: 20px 20px; 
-  opacity: 0.6;
-  z-index: 2;
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/img/about/squares.png");
+    background-repeat: repeat;
+    background-size: 20px 20px; 
+    opacity: 0.6;
+    z-index: 2;
 }
-
 
 .ksh-visual-box::before,
 .ksh-visual-box::after {
-  content: "";
-  position: absolute;
-  z-index: 3;
+    content: "";
+    position: absolute;
+    z-index: 3;
 }
-
 
 .ksh-visual-box::before {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(158, 255, 0, 0) 0%,
-    rgba(158, 255, 0, 0.8) 50%,
-    rgba(158, 255, 0, 0) 100%
-  );
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(51, 79, 5, 0.479) 20%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 2;
 }
 
-
 .ksh-visual-box::after {
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(158, 255, 0, 0) 0%,
-    rgba(158, 255, 0, 0.8) 50%,
-    rgba(158, 255, 0, 0) 100%
-  );
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(158, 255, 0, 0) 0%,
+        rgba(158, 255, 0, 0.8) 50%,
+        rgba(158, 255, 0, 0) 100%
+    );
 }
 
 .ksh-cube-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 72px;
-  height: 72px;
-  transform: translate(-50%, -50%);
-  z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    background-image: url("/assets/img/about/SquareUp_logo.png"); 
+    background-size: contain;      
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: clamp(50px, 4vw, 72px);
+    height: clamp(50px, 4vw, 72px);
 
-  box-shadow:
-    0 0 500px rgb(155, 255, 74),
-    0 0 500px rgb(161, 255, 74),
-    0 0 500px rgba(172, 255, 36, 0.2);
+    filter: drop-shadow(0 0 60px rgba(235, 239, 229, 0.8))
+            drop-shadow(0 0 60px rgba(243, 244, 240, 0.4));
+}
+/* التدرج الأخضر */
+.ksh-visual-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(158, 255, 0, 0.12) 20%,
+        rgba(26, 26, 26, 0.85) 100%
+    );
+    z-index: 2;
 }
 
+/* الخط الأفقي */
+.ksh-visual-box .crosshair-horizontal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        rgba(158, 255, 0, 0) 0%,
+        rgba(158, 255, 0, 0.5) 50%,
+        rgba(158, 255, 0, 0) 100%
+    );
+    z-index: 3;
+}
+
+/* الخط العمودي */
+.ksh-visual-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(158, 255, 0, 0) 0%,
+        rgba(158, 255, 0, 0.5) 50%,
+        rgba(158, 255, 0, 0) 100%
+    );
+    z-index: 3;
+}
+
+
 @media (max-width: 1440px) {
-  .ksh-about-container {
-    margin-left: 100px;
-    margin-right: 100px;
-    gap: 60px;
+ .ksh-about-inner {
+display: flex;
+justify-content: center;
+    gap: 100px;
   }
 
   .ksh-about-content {
     width: 500px;
+    height: 288px;
   }
 
   .ksh-about-content h2 {
@@ -156,8 +194,8 @@ margin-bottom: 80px;
   }
 
   .ksh-visual-box {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
   }
 
   .ksh-cube-img {
@@ -166,15 +204,14 @@ margin-bottom: 80px;
   }
 }
 
-/* ===== Responsive for max-width: 992px ===== */
+
 @media (max-width: 992px) {
-  .ksh-about-container {
-    flex-direction: row;
-    margin-left: 30px;
-    margin-right: 30px;
+ .ksh-about-inner {
+    /* flex-direction: row; */
+display: flex;
+justify-content: center;
     gap: 40px;
-    /* align-items: center;
-    text-align: center; */
+  
   }
 
   .ksh-about-content {
@@ -199,41 +236,75 @@ margin-bottom: 80px;
     height: 50px;
   }
 }
-/* ===== Responsive for max-width: 768px ===== */
+
 @media (max-width: 768px) {
-  .ksh-about-container {
+ .ksh-about-inner{
     flex-direction: column;
-    /* align-items: center;
-    text-align: center; */
-    gap: 30px;       /* مسافة أقل بين العناصر */
-    margin-left: 20px;
-    margin-right: 20px;
+  
+    gap: 30px;       
+
   }
 
   .ksh-about-content {
-    width: 100%;     /* ياخد كامل العرض مع بعض الـ padding */
-    max-width: 320px; /* أقصى عرض للنصوص */
+    width: 100%;     
+    max-width: 320px; 
   }
 
   .ksh-about-content h2 {
-    font-size: 20px; /* تصغير العنوان */
+    font-size: 20px; 
   }
 
   .ksh-about-content p {
-    font-size: 14px; /* تصغير الفقرة */
+    font-size: 14px; 
     line-height: 1.5;
   }
 
   .ksh-visual-box {
     width: 280px;
-    height: 280px; /* تصغير الصورة */
+    height: 280px; 
   }
 
   .ksh-cube-img {
     width: 50px;
-    height: 50px; /* تصغير cube */
+    height: 50px; 
   }
 }
 
+/* Media query للشاشات أقل من 390px */
+@media (max-width: 390px) {
+   .ksh-about-container  {
+        flex-direction: column;
+        gap: 20px; /* أقل من 30px */
+        display: flex;
+        justify-content: center;
+  
+    }
+
+    .ksh-about-content {
+        /* width: 100%; */
+        max-width: 280px; /* يناسب عرض الهواتف الصغيرة */
+    }
+
+    .ksh-about-content h2 {
+        font-size: 18px; /* أصغر حجم */
+        line-height: 1.3;
+    }
+
+    .ksh-about-content p {
+        font-size: 13px;
+        line-height: 1.4;
+        /* width: 100%; */
+    }
+
+    .ksh-visual-box {
+        width: 220px;
+        height: 220px; /* يحافظ على المربع */
+    }
+
+    .ksh-cube-img {
+        width: 45px;
+        height: 45px;
+    }
+}
 
 
