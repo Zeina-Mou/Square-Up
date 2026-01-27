@@ -1,0 +1,12 @@
+.G-H_Divider{
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-background);
+
+}
+
+@media screen and (max-width:992px) {
+    .G-H_Divider{
+        display: none;
+    }
+}

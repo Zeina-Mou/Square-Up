@@ -110,7 +110,7 @@
 }
 
 .G-H_Option input[type="checkbox"]:checked::after {
-    content: url("../../../public/assets/icons/arrow.svg");
+    content: url("../../../public/assets/icons/Icon.svg");
     position: absolute;
     color: var(--button-color);
 }

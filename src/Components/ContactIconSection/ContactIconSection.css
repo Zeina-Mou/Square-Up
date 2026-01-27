@@ -1,0 +1,53 @@
+.G-H_Icon {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    width: 276px;
+    height: 66px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.G-H_Icon a {
+    text-decoration: none;
+}
+
+.G-H_Icon img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.G-H_Icon a:last-child {
+    color: var(--color-p);
+    font-family: var(--font-barlow);
+    font-size: 20px;
+    margin-left: 14px;
+}
+
+@media screen and (max-width:1440px) {
+    .G-H_Icon {
+        padding: 14px 20px;
+    }
+
+    .G-H_Icon a:last-child {
+        font-size: 16px;
+    }
+
+    .G-H_Icon img {
+        width: 24px;
+
+    }
+}
+
+@media screen and (max-width:992px) {
+    .G-H_Icon {
+        padding: 18px 0;
+        width: 100%;
+    }
+
+    .G-H_Icon img {
+        width: 24px;
+
+    }
+}
