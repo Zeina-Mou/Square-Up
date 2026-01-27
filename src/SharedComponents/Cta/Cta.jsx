@@ -6,7 +6,7 @@ const Cta = () => {
         <div className='rb-cta main-margin'>
             <div className='rb-ctaflex'>
                 <div className='image-shadow'></div>
-                <div><h2>Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....</h2>
+                <div className='rb-cta-titel'><h2>Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....</h2>
                     <h4>Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.</h4>
                 </div>
             </div>
