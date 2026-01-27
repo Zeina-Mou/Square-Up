@@ -17,7 +17,6 @@
     width: 30px;
     margin-right: 10px;
 }
-
 .G-H_Icon a:last-child {
     color: var(--color-p);
     font-family: var(--font-barlow);
@@ -33,7 +32,6 @@
     .G-H_Icon a:last-child {
         font-size: 16px;
     }
-
     .G-H_Icon img {
         width: 24px;
 
@@ -45,9 +43,9 @@
         padding: 18px 0;
         width: 100%;
     }
-
     .G-H_Icon img {
         width: 24px;
 
     }
 }
+
