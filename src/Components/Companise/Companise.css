@@ -1,4 +1,26 @@
-.trusted-companies {
+/*
+========================================
+Trusted Companies Section Styles
+========================================
+
+This stylesheet defines the layout and
+responsive behavior of the "Trusted By
+Companies" section.
+
+- Centers the section and controls spacing.
+- Styles the title inside a rounded container.
+- Displays company logos using flex on large screens and grid on small screens.
+- Ensures responsive typography and logo sizing.
+- Uses CSS variables for colors and margins.
+
+Media queries adjust font sizes, spacing,
+and layout to maintain visual consistency
+across different screen sizes.
+========================================
+*/
+
+
+.mn-trusted-companies {
     margin-top: -50px;
     position: relative;
     z-index: 20;
@@ -7,7 +29,7 @@
     align-items: center;
 }
 
-.trusted-title-box {
+.mn-trusted-title-box {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -24,37 +46,52 @@
 
 }
 
-.trusted-title {
+.mn-trusted-title {
     color: var(--color-text);
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     font-size: 18px;
 }
 
-.trusted-logos {
+.mn-trusted-logos {
     margin-top: 29px;
-    max-width: 90%;
+    max-width: 80%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     padding: 40px 0 40px 0;
-    margin-top: 29px;
+    margin-right: var(--main-Hmargin-Dscreen);
+    margin-left: var(--main-Hmargin-Dscreen);
 
 }
 
-.trusted-logos img {
-    padding: 20px 40px;
+.mn-trusted-logos img {
+    padding: 1.25rem 2.5rem;
+    max-width: 15.831rem;
+}
+
+@media (max-width:1440px) {
+    .mn-trusted-title{
+        font-size: 14px;
+    }
+    .mn-trusted-logos{
+    
+        max-width: 1280px;
+        margin-right: var(--main-Hmargin-Lscreen);
+        margin-left: var(--main-Hmargin-Lscreen);
+    }
 }
 
 @media (max-width: 992px) {
-    .trusted-title-box{
+    .mn-trusted-title-box{
         padding: 14px 24px;
 
     }
-    .trusted-title{
+    .mn-trusted-title{
         font-size: 14px;
     }
-    .trusted-logos{
+    .mn-trusted-logos{
         width: 355px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -63,17 +100,17 @@
         border-radius: 0px 1px 1px 1px;
         padding: 0;
     }
-    .trusted-logos img{
+    .mn-trusted-logos img{
         width: 100%;
         box-sizing: border-box;
         padding: 30px;
         border-bottom: 1px solid var( --color-background);
         border-right: 1px solid var( --color-background);
     }
-    .trusted-logos img:nth-child(2n){
+    .mn-trusted-logos img:nth-child(2n){
         border-right: none;
     }
-    .trusted-logos img:nth-last-child(-n+2){
+    .mn-trusted-logos img:nth-last-child(-n+2){
         border-bottom: none;
     }
 }
