@@ -1,9 +1,9 @@
 .rb-card {
     background-color: var(--color-body);
     color: var(--color-p);
-    border: solid 1px #2E2E2E;
+    border: solid 1px #2e2e2e57;
     padding: 40px;
-    min-height: 455px;
+    min-height: 467px;
     font-family: 'Barlow';
     display: flex;
     flex-direction: column;
@@ -15,10 +15,12 @@
         border: 1px solid #2E2E2E;
         border-radius: 10px;
         gap: 10px;
+        margin-bottom: 10px;
     }
 
     h1 {
         padding: 14px 0px;
+        font-size: 24px;
     }
 
     p {
@@ -28,6 +30,7 @@
         line-height: 150%;
         letter-spacing: -0.6%;
         font-family: 'Barlow';
+        width: 91%;
     }
 
     button {
@@ -65,10 +68,7 @@ button:hover {
 .rb-type2 {
     width: calc(100% /2 );
     min-height: 292px; 
-
-
 }
-
 .rb-type3 {
     width: calc(100% /3);
 }
@@ -76,10 +76,11 @@ button:hover {
 @media (min-width: 1440px) {
 
     .rb-card{
-        min-height: 577px;
-        padding: 50px;
+        
+        padding: 46px;
         img{
             padding: 24px;
+            margin-bottom: 20px;
         }
         h1{
             font-size: 30px;
@@ -87,26 +88,64 @@ button:hover {
         p{
             font-size: 18px;
             line-height: 24px;
-            letter-spacing: -0.6%;
         }
+    }
+    .rb-titel{
+        margin-bottom: 20px;
+    }
+    .rb-type2{
+        min-height: 298px; 
+        
+        h1{
+            font-size: 26px;
+        }
+        p{
+            width: 87%;
+            line-height: 150%;
+        }
+    }
+    .rb-type3{
+        min-height: 567px;
     }
 }
 
 @media (max-width: 992px) {
     .rb-card {
+        min-height: 378px;
+        padding: 30px;
         width: 100%;
-
+        p{
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+            button{
+        width: 100%;
     }
+    }
+    .rb-type2{
+        min-height: 278px; 
+    p{
+        margin-bottom: 0px;
+    }}
+
     .rb-type3{
         .rb-titel {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 15px;
+    padding-bottom: 18px; 
         }
     }
 
     .rb-cards {
         display: block;
+    }
+    .rb-titel{
+        h1{
+            font-size: 20px;
+            width: 100%;
+        }
     }
 
 }

@@ -1,0 +1,221 @@
+.sb-clients {
+    margin-left: var(--main-Hmargin-Dscreen);
+    margin-right: var(--main-Hmargin-Dscreen);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.sb-ClientCard {
+    width: 50%;
+    min-height: 532px;
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--color-background) solid;
+    border-radius: 0;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.sb-ClientCard-inner {
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(1.2rem, 2vh, 2.5rem);
+    width: 100%;
+    height: 100%;
+}
+
+.sb-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.6rem, 1vh, 1rem);
+    flex: 1 1 auto;
+}
+
+.sb-ClientCard h3 {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--color-aboutus-text);
+}
+
+.sb-description {
+    font-family: Barlow;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-p);
+}
+
+.sb-container-Profile {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 20px;
+    border: 1px var(--color-background) solid;
+    background-color: var(--color-sbCard);
+    border-radius: 8px;
+}
+
+.sb-profile {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    line-height: 1.5;
+}
+.sb-profile .sb-client-text {
+    font-weight: 400;
+    font-size: clamp(0.75rem, 1vw, 1.125rem);
+    color: var(--color-p);
+}
+
+.sb-profile .sb-client-name {
+    margin-bottom: 0.125rem;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 1.2vw, 1.25rem);
+    color: var(--color-titles);
+}
+
+.sb-button {
+    padding: clamp(0.625rem, 1vw, 1.125rem) clamp(0.625rem, 1vw, 1.25rem);
+    font-size: clamp(0.75rem, 1vw, 1.125rem);
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    color: var(--color-titles);
+    background-color: var(--color-background);
+    cursor: pointer;
+    border: none;
+}
+
+.sb-button:hover {
+    background-color: var(--color-rarbackground);
+}
+
+.sb-slider {
+    margin-left: var(--main-Hmargin-Lscreen);
+    margin-right: var(--main-Hmargin-Lscreen);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: clamp(1.25rem, 3vh, 2rem);
+}
+
+.sb-slider-track {
+    display: flex;
+    transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    /* will-change: transform; */
+}
+
+.sb-slider-item {
+    flex: 0 0 calc(100% / var(--visible-cards));
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+}
+
+.sb-slider-item .sb-ClientCard {
+    width: 100% !important;
+}
+
+.sb-slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: clamp(0.75rem, 2vh, 1rem);
+}
+
+@media (max-width: 1440px) {
+
+    .sb-clients,
+    .sb-slider {
+        margin-left: var(--main-Hmargin-Lscreen);
+        margin-right: var(--main-Hmargin-Lscreen);
+    }
+
+    .sb-ClientCard,
+    .sb-slider-item {
+        min-height: 420px;
+    }
+
+    .sb-ClientCard-inner {
+        padding: 80px 60px;
+        gap: 0px;
+    }
+
+    .sb-ClientCard h3 {
+        font-size: 20px;
+    }
+
+    .sb-description {
+        font-size: 16px;
+    }
+
+    .sb-container-Profile {
+        margin-top: 30px;
+        padding: 14px;
+        border-radius: 6px;
+    }
+    .sb-profile {
+    gap: 12px
+}
+.sb-profile .sb-client-text {
+    font-size:14px
+}
+
+.sb-profile .sb-client-name {
+    margin-bottom: 0.125rem;
+    font-size: 16px;
+}
+.sb-profile img{
+    width: 50px;
+    height: 50px;
+}
+.sb-button {
+    padding:14px 16px;
+    font-size:14px
+}}
+
+@media (max-width: 992px) {
+        .sb-ClientCard .sb-button {
+        display: none;
+    }
+
+    .sb-clients,
+    .sb-slider {
+        margin-left: var(--main-Hmargin-Mscreen);
+        margin-right: var(--main-Hmargin-Mscreen);
+    }
+    .sb-ClientCard,
+    .sb-slider-item {
+        min-height: 380px;
+    }
+    
+    .sb-ClientCard-inner {
+        padding: 40px 24px;
+        gap: 0px;
+    }
+
+    .sb-ClientCard h3 {
+        font-size: 18px;
+    }
+
+    .sb-description {
+        font-size: 14px;
+    }
+
+    .sb-container-Profile {
+        margin-top: 24px;
+    }
+    .sb-profile {
+    gap: 10px
+}
+.sb-profile img{
+    width: 40px;
+    height: 40px;
+}
+}

@@ -3,7 +3,7 @@ import Cards from "../SharedComponents/Cards/Card"
 import ContactSection from "../SharedComponents/ContactSection/ContactSection"
 import HomeCards from "../SharedComponents/HomeCards/HomeCards";
 import HomeCard2 from "../SharedComponents/HomeCard2/HomeCard2";
-
+import ClientsOpinion from "../SharedComponents/ClientsOpinion/ClientsOpinion"
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import Companise from "../components/Companise/Companise"
 import Hero from "../components/Hero/Hero"
@@ -54,6 +54,7 @@ const Home = () => {
         description="At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us"
         image={"assets/img/home/about_us.png"}
       />
+        <ClientsOpinion/>
       <HeaderSection
         title="Frequently Asked Questions"
         description="Still you have any questions? Contact our Team via hello@squareup.com"
