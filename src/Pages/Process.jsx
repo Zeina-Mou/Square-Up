@@ -1,14 +1,24 @@
 import ContactSection from "../SharedComponents/ContactSection/ContactSection"
+import AtSquareUpSection from "../SharedComponents/AtSquareUpSection/AtSquareUpSection"
+
+
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
+import Title from "../SharedComponents/Title/Title"
 
 const Process = () => {
   return (
     <>
-    <HeaderSection
+      <HeaderSection
         title="Process of Starting the Project"
         description="At SquareUp, we value transparency, collaboration, and delivering exceptional results."
         image={"assets/img/prosess/hero.png"}
       />
+      <Title
+        title="At SquareUp"
+        desc1="We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach."
+        desc2="Here's an overview of our typical process:"
+      />
+      <AtSquareUpSection/>
       <ContactSection
         image="assets/img/home/thank.png"
         logo=""

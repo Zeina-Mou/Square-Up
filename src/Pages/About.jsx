@@ -1,4 +1,6 @@
 import Cta from "../SharedComponents/Cta/Cta"
+import OurStorySection from "../SharedComponents/OurStorySection/OurStorySection"
+import Title from "../SharedComponents/Title/Title"
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 
 const About = () => {
@@ -9,7 +11,14 @@ const About = () => {
         description="Welcome to SquareUp, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation."
         image={"assets/img/about/hero.png"}
       />
-        <Cta />
+      <Title
+        title="Our Story"
+        MIDpaddingOurH2="mid-padding"
+        MINpaddingOurH2="min-padding"
+        paddingOurH2="padding-OurH2"
+      />
+      <OurStorySection/>
+      <Cta />
     </>
   )
 }
