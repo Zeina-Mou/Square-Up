@@ -1,0 +1,70 @@
+/* Defines the main container that sets the section's height, centering, and primary theme color */
+.ze-hero-container {
+    position: relative;
+    height: 17.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #acff246e;
+    background-blend-mode: color;
+}
+
+/* Handles the background image processing, applying filters to create a dark, desaturated aesthetic */
+.ze-hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    /* grayscale(100%) removes original image colors to adopt the theme color */
+    filter: grayscale(100%) brightness(0.2) contrast(1.1);
+    opacity: 89%;
+    z-index: 1;
+}
+
+/* Creates a repeating geometric texture over the image to add a professional tech-style grid */
+.ze-hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/home/squares.png');
+    background-repeat: repeat;
+    /* mix-blend-mode: overlay allows the pattern to react to the background light */
+    mix-blend-mode: overlay;
+    opacity: 60%;
+    z-index: 2;
+}
+
+/* A relative wrapper for the text elements to ensure they remain at the top of the layer stack */
+.ze-hero-content {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    max-width: 969px;
+}
+
+@media (max-width: 1440px) {
+    .ze-hero-content {
+        max-width: 780px;
+    }
+}
+/* Stylizes the main title with bold weight and appropriate spacing */
+.ze-hero-content h2 {
+    font-size: clamp(28px, 1.8vw + 14px, 48px);
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+/* Stylizes the descriptive paragraph with a max width for better readability and slight transparency */
+.ze-hero-content p {
+    line-height: 24px;
+    font-size: clamp(14px, 0.4vw + 12px, 18px);
+    opacity: 0.9;
+}
