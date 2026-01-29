@@ -4,6 +4,7 @@ import AtSquareUpSection from "../SharedComponents/AtSquareUpSection/AtSquareUpS
 
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import Title from "../SharedComponents/Title/Title"
+import Cta from "../SharedComponents/Cta/Cta"
 
 const Process = () => {
   return (

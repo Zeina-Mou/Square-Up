@@ -1,0 +1,54 @@
+.G-H_SocialIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--color-background);
+    border-radius: 12px;
+    border-radius: 6px;
+    padding: 14px 14px 24px;
+}
+
+.G-H_SocialIcons .G-H_Description {
+    color: var(--color-p);
+    font-family: var(--font-barlow);
+    font-size: 18px;
+    margin: 0 10px ;
+}
+
+.G-H_SocialIcons .G-H_ImageWrapper {
+    display: flex;
+    gap: 14px;
+}
+
+.G-H_SocialIcons .G-H_Image {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(#242424, #24242400);
+    border: 1px solid linear-gradient(#2E2E2E, #2E2E2E00);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1440px) {
+    .G-H_SocialIcons {
+        padding: 10px 10px 20px;
+    }
+
+    .G-H_SocialIcons .G-H_Description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .G-H_SocialIcons {
+        flex-direction: column;
+        padding: 20px 0 40px;
+        width: 100%;
+        margin-left: 0;
+        border: 0;
+        border-top: 1px solid var(--color-background);
+        border-radius: 0;
+    }
+}

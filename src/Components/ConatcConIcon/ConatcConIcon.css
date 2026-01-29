@@ -1,0 +1,23 @@
+.G-H_ContactIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid var(--color-background);
+    padding: 50px 0;
+}
+
+
+@media screen and (max-width:1440px) {
+    .G-H_ContactIcons {
+        padding: 40px 0;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .G-H_ContactIcons {
+        flex-direction: column;
+        padding: 30px 24px;
+    }
+}

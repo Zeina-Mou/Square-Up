@@ -1,6 +1,6 @@
 .Contact-Section{
     height: 31.678rem;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +79,7 @@
 @media (min-width: 1440px) {
     .Contact-Section{
         height: 39rem;
+        margin-bottom: 60px;
     }
     .rb-style{
         .rb-shadow{
@@ -102,6 +103,7 @@
 @media (max-width: 992px) {
     .Contact-Section{
         height: 28,937rem;
+        margin-bottom: 24px;
     }
     .rb-style{
         .rb-shadow{
