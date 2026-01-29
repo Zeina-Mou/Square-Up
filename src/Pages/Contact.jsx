@@ -1,5 +1,4 @@
 import Cta from "../SharedComponents/Cta/Cta"
-import ContactForm from "../Components/Contact/Contact"
 import ContactSection from "../Components/ContactSection/ContactSection"
 import ConatcConIcon from "../Components/ConatcConIcon/ConatcConIcon"
 import ContactIconSection from "../Components/ContactIconSection/ContactIconSection"
@@ -9,6 +8,7 @@ import ContactSocialIcons from "../Components/ContactSocialIcons/ContactSocialIc
 import Divider from "../Components/Divider/Divider"
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import FAQList from "../components/faq/FAQList"
+import ContactForm from "../components/Contact/Contact"
 const Contact = () => {
   return (
     < >
