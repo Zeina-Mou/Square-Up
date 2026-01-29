@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
-import Cards from "../SharedComponents/Cards/Card"
-import ContactSection from "../SharedComponents/ContactSection/ContactSection"
+import Cards from "../SharedComponents/Cards/Card";
+import ContactSection from "../SharedComponents/ContactSection/ContactSection";
 import HomeCards from "../SharedComponents/HomeCards/HomeCards";
 import HomeCard2 from "../SharedComponents/HomeCard2/HomeCard2";
-import ClientsOpinion from "../SharedComponents/ClientsOpinion/ClientsOpinion"
-import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
-import Companise from "../components/Companise/Companise"
-import Hero from "../components/Hero/Hero"
-import FAQItem from "../components/faq/FAQItem"
-import FAQList from "../components/faq/FAQList"
-/* Main Home page component that serves as the entry point for the other sections */
+import ClientsOpinion from "../SharedComponents/ClientsOpinion/ClientsOpinion";
+import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection";
+import Companise from "../components/Companise/Companise";
+import FAQList from "../components/faq/FAQList";
+import Hero from "../Components/Hero/Hero";
+
 const Home = () => {
   // استدعاء الداتا 
   const [cards, setCards] = useState([]);
@@ -34,7 +33,7 @@ const Home = () => {
   return (
     <>
       <Hero/>
-      {/* <Companise/> */}
+      <Companise/>
       <HeaderSection
         title="Our Services"
         description="Transform your brand with our innovative digital solutions that captivate and engage your audience."
@@ -54,7 +53,7 @@ const Home = () => {
         description="At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us"
         image={"assets/img/home/about_us.png"}
       />
-        <ClientsOpinion/>
+      <ClientsOpinion/>
       <HeaderSection
         title="Frequently Asked Questions"
         description="Still you have any questions? Contact our Team via hello@squareup.com"
@@ -70,7 +69,7 @@ const Home = () => {
         button="Start Project"
       />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
