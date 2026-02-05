@@ -134,3 +134,45 @@
         }
     }
 }
+.nav-user-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.user-name-box {
+    background: rgba(158, 255, 0, 1);
+    color: #1A1A1A;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.logout-box-btn {
+    background: rgba(36, 36, 36, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 0 12px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logout-box-btn:hover {
+    background: rgba(255, 60, 60, 0.8);
+    border-color: transparent;
+}

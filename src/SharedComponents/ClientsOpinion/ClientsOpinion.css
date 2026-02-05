@@ -30,7 +30,7 @@
 .sb-card-body {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.6rem, 1vh, 1rem);
+    gap: clamp(1.25rem, 1vh, 1rem);
     flex: 1 1 auto;
 }
 
@@ -156,7 +156,7 @@
     }
 
     .sb-container-Profile {
-        margin-top: 30px;
+        margin-top: 10px;
         padding: 14px;
         border-radius: 6px;
     }

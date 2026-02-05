@@ -34,9 +34,7 @@
     height: 100%;
     background-image: url('assets/img/home/squares.png');
     background-repeat: repeat;
-    /* mix-blend-mode: overlay allows the pattern to react to the background light */
-    mix-blend-mode: overlay;
-    opacity: 60%;
+    opacity: 50%;
     z-index: 2;
 }
 
@@ -54,6 +52,7 @@
     .ze-hero-container {
         height: 17.5rem;
     }
+
     .ze-hero-content {
         max-width: 780px;
     }
@@ -64,6 +63,7 @@
         height: 13.25rem;
     }
 }
+
 /* Stylizes the main title with bold weight and appropriate spacing */
 .ze-hero-content h2 {
     font-size: clamp(28px, 1.8vw + 14px, 48px);

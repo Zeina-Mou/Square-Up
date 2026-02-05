@@ -1,16 +1,17 @@
 import './AtSquareUpSection.css'
 import NumberCard from './NumberCard'
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../../utils/config';
 
 function AtSquareUpSection() {
     const [atSqerUpData, setAtSqerUpData] = useState([]);
     const [showMore, setShowMore] = useState(false);
 
     useEffect(() => {
-        fetch('/Square-Up/saba-DataBase/AtSquareUpData.json')
-            .then(res => res.json())
-            .then(data => setAtSqerUpData(data))
-            .catch(err => console.log(err));
+        fetch(`${API_BASE_URL}/atsquareup`) 
+            .then((res) => res.json())
+            .then((data) => setAtSqerUpData(data))
+            .catch((err) => console.error("Error fetching FAQ:", err));
     }, []);
 
     const visibleCount = showMore ? Math.min(8, atSqerUpData.length) : Math.min(4, atSqerUpData.length);

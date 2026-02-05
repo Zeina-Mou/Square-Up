@@ -1,20 +1,20 @@
 .rb-flex-works {
-    /* width: 100%; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 /* تنسيق كروت قسم work */
 .rb-cardwork {
     width: 50%;
     display: flex;
     flex-direction: column;
     color: var(--color-p);
-    padding-bottom: 80px;
+    padding-bottom: 57px;
     border: 1px solid rgba(62, 62, 62, 0.315);
 
     .rb_picther {
-        width: 90%;
+        width: 35rem;
         margin: 20px auto;
     }
 
@@ -29,33 +29,30 @@
 }
 
 .rb_text {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 
 .rb-firstTitel {
-    padding: 40px 24px;
+    padding: 24px 40px;
     border: 1px solid rgba(63, 62, 62, 0.178);
     font-size: 20px;
     font-weight: 500;
     color: var(--color-footer-link);
     width: 100%;
-    padding-left: 4%;
 
 }
 
 .rb-p-work {
-    width: 98%;
     font-size: 16px;
     font-weight: 400;
     font-family: 'Inter';
     color: var(--color-footer-link);
-    padding: 10px 20px 20px 50px;
+    padding: 10px 50px 20px 50px;
 }
 
 .rb-icon-work {
-
     display: block;
-
 }
 
 .rb-link-work {
@@ -63,6 +60,7 @@
     background-color: rgba(62, 62, 62, 0.459);
     border-radius: 6px;
     color: var(--color-footer-link);
+    font-size: 16px;
 }
 
 .toggle-btn {
@@ -78,54 +76,93 @@
 .rb-icon-link {
     display: inline-block;
     cursor: pointer;
-    padding: 3%;
+    padding: 14.5px;
     background-color: rgba(62, 62, 62, 0.459);
     border-radius: 6px;
 }
-@media (min-width: 1440px) {
-    .rb-firstTitel{
-        font-size: 26px;
+
+@media (min-width: 1441px) {
+    .rb-cardwork {
+        padding-bottom: 67.9px;
+
+        .rb_picther {
+            width: 43.625rem;
+        }
     }
-    .rb-sectitel{
+
+    .rb-firstTitel {
+        font-size: 26px;
+        padding: 30px 50px;
+    }
+
+    .rb-p-work {
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .rb-link-work {
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: 20px;
+        letter-spacing: -1.46px;
+    }
+
+    .rb-firstTitel {
+        padding-left: 6%;
+    }
+
+    .rb_text {
         font-size: 24px;
     }
-    .rb-p-work{
-        font-size: 18px;
+
+    .rb-icon-link {
+        padding: 18.5px;
     }
-    .rb-link-work{
-        border-radius: 8px;
-        padding: 12px 10px;
-    }
-    .rb-firstTitel{
-            padding-left: 6%;
-    }
+
 }
+
 
 @media (max-width: 992px) {
     .rb-flex-works {
         display: block;
     }
-.rb-firstTitel{
-        padding-left: 2%;
-}
+
+    .rb-firstTitel {
+        padding: 20px 24px;
+    }
 
     .rb-cardwork {
         width: 100%;
         padding-bottom: 40px;
-
-        p {
-            font-size: 12px;
+        .rb_picther {
+            width: 19.375rem;
         }
-
     }
-    .rb-icon-link{
+
+    .rb-p-work {
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 0;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .rb-icon-link {
         margin-top: 45px;
-        padding: 4%;
+        padding: 14.5px;
     }
 
     .rb-sectitel {
         font-size: 18px;
         flex-wrap: wrap;
+        margin-bottom: 0 !important;
+    }
+
+    .rb-link-work {
+        padding: 8px 10px;
+        font-size: 14px;
+        gap: 10px;
+        line-height: 150%;
     }
 
 }

@@ -10,24 +10,45 @@ const ContactForm = () => {
     const mobileRef = useRef(null)
     const othersRef = useRef(null)
 
-    const saveUser = (event) => {
-        event.preventDefault()
-        const options = []
-        if (webRef.current?.checked) options.push("web")
-        if (collabRef.current?.checked) options.push("collaboration")
-        if (mobileRef.current?.checked) options.push("mobile")
-        if (othersRef.current?.checked) options.push("others")
+    const saveUser = async (event) => {
+    event.preventDefault();
+    const options = [];
+    if (webRef.current?.checked) options.push("web");
+    if (collabRef.current?.checked) options.push("collaboration");
+    if (mobileRef.current?.checked) options.push("mobile");
+    if (othersRef.current?.checked) options.push("others");
 
-        const user = {
-            id: Date.now(),
-            name: name.current.value,
-            email: email.current.value,
-            options,
-            message: message.current.value
+    const user = {
+        name: name.current.value,
+        email: email.current.value,
+        options,
+        message: message.current.value
+    };
+
+    try {
+        // 1. الحفظ في السيرفر (ملف JSON)
+        const response = await fetch("http://localhost:5000/users", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user)
+        });
+
+        if (response.ok) {
+            const savedUser = await response.json();
+            
+            // 2. حفظ الاسم محلياً ليعرفه الـ Navbar فوراً
+            localStorage.setItem("userName", savedUser.name);
+
+            // 3. إرسال حدث لتنبيه الـ Navbar بوجود مستخدم جديد
+            window.dispatchEvent(new CustomEvent("user:updated", { detail: savedUser }));
+            
+            alert(`Welcome ${savedUser.name}! Your data is saved.`);
+            formRef.current.reset();
         }
-        window.dispatchEvent(new CustomEvent("user:updated", { detail: user }));
-        formRef.current.reset()
+    } catch (error) {
+        console.error("Error saving user:", error);
     }
+};
 
     return (
         <form ref={formRef} className='G-H_FormContact main-margin' onSubmit={saveUser}>

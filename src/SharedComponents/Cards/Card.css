@@ -3,42 +3,42 @@
     color: var(--color-p);
     border: solid 1px #2e2e2e57;
     padding: 40px;
-    min-height: 467px;
-    font-family: 'Barlow';
+    min-height: 510px;
     display: flex;
     flex-direction: column;
 
-
+    .ze-img-container {
+        width: fit-content;
+        padding: 1.25rem;
+        background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%),
+                    linear-gradient(229.29deg, rgba(158, 255, 0, 0.2) -68.25%, rgba(158, 255, 0, 0) 32.16%);
+        border-image-source: linear-gradient(180deg, #2E2E2E 0%, rgba(46, 46, 46, 0) 100%);
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
     img {
-        padding: 14px;
-        background-image: linear-gradient(45deg, #242424, #83818163);
-        border: 1px solid #2E2E2E;
-        border-radius: 10px;
-        gap: 10px;
-        margin-bottom: 10px;
+        width: 1.875rem;
     }
 
     h1 {
-        padding: 14px 0px;
         font-size: 24px;
     }
 
     p {
         color:var(--color-p);
-        font-weight: 400;
-        font-size: 89%;
+        font-size: 1rem;
         line-height: 150%;
-        letter-spacing: -0.6%;
-        font-family: 'Barlow';
+        letter-spacing: -0.6px;
         width: 91%;
+        padding-top: 14px;
     }
 
     button {
-        padding: 16px;
-        width: 90%;
+        padding: 14px 0;
+        width: 100%;
         /* background-color: var(--color-button-text); */
-        background-color: #64636349;
-        border-radius: 8px;
+        background-color: #262626;;
+        border-radius: 6px;
         color: var(--color-p);
         cursor: pointer;
         margin-top: auto;
@@ -54,7 +54,7 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 15px; 
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .rb-cards {
@@ -68,19 +68,24 @@ button:hover {
 .rb-type2 {
     width: calc(100% /2 );
     min-height: 292px; 
+    padding: 60px;
+    .ze-img-container {
+        margin-bottom: 0;
+    }
+    p {
+        padding: 0;
+    }
 }
 .rb-type3 {
     width: calc(100% /3);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
 
     .rb-card{
-        
-        padding: 46px;
+        padding: 3.125rem;
         img{
-            padding: 24px;
-            margin-bottom: 20px;
+            width: 2.5rem;
         }
         h1{
             font-size: 30px;
@@ -88,20 +93,32 @@ button:hover {
         p{
             font-size: 18px;
             line-height: 24px;
+            padding-top: 20px;
+        }
+        button {
+            padding: 18px 0;
+        }
+        .ze-img-container {
+            margin-bottom: 40px;
         }
     }
-    .rb-titel{
-        margin-bottom: 20px;
-    }
+
     .rb-type2{
+        padding: 80px;
         min-height: 298px; 
-        
+        .ze-img-container {
+            margin-bottom: 0px;
+        }
         h1{
             font-size: 26px;
         }
         p{
             width: 87%;
+            font-size: 1.25rem;
             line-height: 150%;
+        }
+        .rb-titel {
+            margin-bottom: 20px;
         }
     }
     .rb-type3{
@@ -111,30 +128,38 @@ button:hover {
 
 @media (max-width: 992px) {
     .rb-card {
-        min-height: 378px;
+        min-height: 344px;
         padding: 30px;
         width: 100%;
+        .ze-img-container {
+            padding: 1rem;
+            margin-bottom: 0;
+        }
         p{
             width: 100%;
             margin-bottom: 20px;
+            padding-top: 0;
             font-size: 14px;
         }
-            button{
-        width: 100%;
-    }
+        img {
+            width: 1.625rem;
+        }
+        button{
+            width: 100%;
+        }
     }
     .rb-type2{
-        min-height: 278px; 
+        min-height: 267px; 
     p{
         margin-bottom: 0px;
     }}
 
     .rb-type3{
         .rb-titel {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-bottom: 18px; 
+            display: flex;
+            align-items: center;
+            padding-bottom: 24px;
+            gap: 15px; 
         }
     }
 

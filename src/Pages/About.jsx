@@ -2,7 +2,7 @@ import Cta from "../SharedComponents/Cta/Cta"
 import OurStorySection from "../SharedComponents/OurStorySection/OurStorySection"
 import Title from "../SharedComponents/Title/Title"
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
-import AboutSquareUp from "../Components/AboutSquareUp/AboutSquareUp"
+import AboutSquareUp from "../components/AboutSquareUp/AboutSquareUp"
 
 const About = () => {
   return (

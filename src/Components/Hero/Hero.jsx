@@ -1,32 +1,3 @@
-/*
-========================================
-Component: Hero
-========================================
-Description:
-------------
-Hero is a React functional component that represents the main hero section of the homepage.
-It introduces the website with a headline,descriptive tags, and call-to-action buttons.
-----------------------------------------
-Features:
----------
-- Displays a main title with line break.
-- Includes decorative background elements (grid pattern and mountain background).
-- Shows a descriptive text highlighting target audiences.
-- Provides navigation buttons using React Router Link components.
-----------------------------------------
-Technical Details:
-------------------
-- Component Type: Functional Component
-- State: None
-- Props: None
-- Styling: External CSS file (Hero.css)
-- Navigation: react-router-dom (Link)
-----------------------------------------
-Usage:
-------
-Used as the main landing section to capture user attention and guide them to key pages (Works, Contact).
-========================================
-*/
 import './Hero.css'
 import { Link } from 'react-router-dom'
 
@@ -55,6 +26,9 @@ const Hero = () => {
                         <span>and</span>
                         <span className="mn-tag">Social Good</span>
                     </div>
+                    <div className="mn-description-on-mScreen">
+                        <p>For startups, enterprise leaders, media &<br/> publishers, and social good.</p>
+                    </div>
 
                     <div className="mn-hero-buttons">
                         <Link to="/works" className="mn-btn mn-btn-outline">Our Works</Link>
@@ -62,6 +36,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+            <p className='ze-description'>Trusted By 250+ Companies</p>
         </div>
     )
 }

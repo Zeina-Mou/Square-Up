@@ -1,7 +1,5 @@
 import ContactSection from "../SharedComponents/ContactSection/ContactSection"
 import AtSquareUpSection from "../SharedComponents/AtSquareUpSection/AtSquareUpSection"
-
-
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection"
 import Title from "../SharedComponents/Title/Title"
 import Cta from "../SharedComponents/Cta/Cta"
@@ -27,6 +25,7 @@ const Process = () => {
         paragraph="We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us."
         button="Start Project"
       />
+      <Cta/>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './ContactSection.css'
 
-const ContactSection = ({ image, logo, text, paragraph, button }) => {
+const ContactSection = ({ image, logo, text, paragraph }) => {
     return (
         <div className="Contact-Section main-margin">
             <div

@@ -3,7 +3,7 @@ import "./Title.css"
 function Title({ title, desc1, desc2,MIDpaddingOurH2 , MINpaddingOurH2 ,paddingOurH2 }) {
     return (
         <>
-            <div className='sb-title-sec'>
+            <div className='sb-title-sec main-margin'>
                 <div className="sb-borderTitle">
                 <h2 className={`${MIDpaddingOurH2 } ${MINpaddingOurH2} ${paddingOurH2}`}>{title}</h2>
                 {desc1 ? (

@@ -1,30 +1,51 @@
-body{
-    background-color: var(--color-body);
+body {
+  background-color: var(--color-body);
 }
 
 .kh-faq-container {
-    position: relative; /* الأساس للخطوط المطلقة */
-    display: flex;
-    align-items: flex-start; 
-    margin: 60px auto;
-    border: 1px solid var(--color-rarbackground);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1600px;
+  /* margin: 80px auto; */
+  margin-top: 60px;
+  margin-bottom: 60px;
+
 }
-.kh-faq-item:last-child {
-    border-bottom: none;
+
+.kh-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
+
+.kh-toggle-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.kh-faq-item.active .kh-toggle-icon {
+  transform: rotate(180deg);
+  filter: brightness(1.2);
+}
+
+/* Vertical lines */
 .kh-faq-container::before,
-.kh-faq-container::after {
+.kh-faq-container::after,
+.kh-middle-line {
   content: "";
   position: absolute;
-  top: -60px;      /* يمتد للسيكشن اللي فوق */
-  bottom: -60px;   /* يمتد للسيكشن اللي تحت */
+  top: -60px;
+  bottom: -60px;
   width: 1px;
   background-color: var(--color-rarbackground);
+  opacity: 0.6;
   pointer-events: none;
-
+  z-index: 1;
 }
-
-
 
 .kh-faq-container::before {
   left: 0;
@@ -34,143 +55,143 @@ body{
   right: 0;
 }
 
-
-.kh-faq-container .kh-middle-line {
-  position: absolute;
-  top: -60px;
-  bottom: -60px;
+.kh-middle-line {
   left: 50%;
-  width: 1px;
-  background-color: var(--color-rarbackground);
   transform: translateX(-50%);
-  pointer-events: none;
 }
+
+/* Columns */
 .kh-faq-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start; 
-    position: relative;
-       overflow: visible; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  position: relative;
+  border-top: 1px solid var(--color-rarbackground);
+  border-bottom: 1px solid var(--color-rarbackground);
+
 }
 
-.kh-toggle-btn.active {
-  color: var(--button-color);
+.kh-faq-column:first-child {
+  border-right: 1px solid var(--color-rarbackground);
 }
+
+/* FAQ item */
 .kh-faq-item {
-    padding: 30px;
-    border-bottom: 1px solid var(--color-rarbackground);
-    background-color: transparent; 
-    width: 100%;
-    box-sizing: border-box;
+  padding: 34px 50px;
+  border-bottom: 1px solid var(--color-rarbackground);
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .kh-faq-column .kh-faq-item:last-child {
-    border-bottom: none;}
-.kh-faq-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  /* gap: 20px; */
-}
-/* الخط الفاصل العمودي */
-.kh-faq-column:first-child {
-    border-right: 1px solid var(--color-rarbackground);
-}
-.kh-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  border-bottom: none;
+
 }
 
+/* Header */
+.kh-faq-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.kh-left {
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+/* Number */
 .kh-faq-number {
-    background: linear-gradient(180deg, #2E2E2E 0%, #1A1A1A 100%);
-    border: 1px solid #333;
-    border-radius: 8px;
-    width: 30px;
-    height: 30px;
-     /* لضمان عدم تقلص المربع */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--color-titles);
+  background: linear-gradient(180deg, #2E2E2E 0%, #1A1A1A 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-titles);
+  padding: 20px;
+  border-bottom: none;
 }
-.kh-faq-item.active .kh-toggle-btn {
-    transform: rotate(45deg); 
-    color: var(--button-color);
-}
+
 .kh-faq-number.active {
   color: var(--button-color);
 }
 
+/* Question */
 .kh-faq-header h3 {
-    font-size: 16px;
-    color: var(--color-titles);
-    width: 350px;
-    font-weight: 500;
-    margin: 0;
-    flex-grow: 1; /* ليأخذ المساحة ويدفع علامة + لليمين */
-}
-/* إزالة الحد السفلي لآخر عنصر لتجنب الخط المزدوج في الأسفل */
-.kh-faq-item:last-child {
-    border-bottom: none;
-}
-.kh-toggle-btn {
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 19px;
+  color: var(--color-titles);
+  width: 524px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+  flex-grow: 1;
+
 }
 
-
-/* .kh-faq-p {
-  margin-top: 20px;
-  padding-left: 60px; 
-}
-
-.kh-faq-p p {
-  color: #98989a;
-  line-height: 1.6;
-  font-size: 14px;
-} */
-
-.kh-faq-number.active,
 .kh-faq-header h3.active {
+  color: #C5FF66;
+}
+
+/* Toggle */
+.kh-toggle-btn {
+  width: 34px;
+  height: 34px;
+  background: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kh-faq-item.active .kh-toggle-btn {
+  transform: rotate(45deg);
   color: var(--button-color);
+
 }
 
+/* Answer */
 .kh-faq-p {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+  color: var(--color-p);
+  font-size: 15px;
+  line-height: 1.4;
+  padding-left: 64px;
+  width: 620px;
+  color: rgba(230, 230, 230, 0.9);
+}
+
+.kh-faq-p>p {
   overflow: hidden;
-color: var( --color-p);
-  transform: translateY(-5px);
-  transition: 
-    max-height 0.4s ease,
-    opacity 0.3s ease,
-    transform 0.2s ease;
-
 }
 
-.main-margin {
-    margin-right: var(--main-Hmargin-Dscreen);
-    margin-left: var(--main-Hmargin-Dscreen);
-}
 .kh-faq-p.open {
-  max-height: 300px;
-  opacity: 1;
-  transform: translateY(0);
-  margin-top: 10px;
+
+  grid-template-rows: 1fr;
+  line-height: 150%;
+  color: rgb(230, 230, 230, 0.9);
+  width: 588px;
+  padding-left: 100px;
 }
 
+
+/* Show more */
 .kh-show-more-wrapper {
   display: none;
   text-align: center;
@@ -180,7 +201,7 @@ color: var( --color-p);
 .kh-show-more-btn {
   background: var(--color-body);
   border: 1px solid var(--color-background);
-  color:var(--color-titles);
+  color: var(--color-titles);
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
@@ -189,77 +210,56 @@ color: var( --color-p);
 
 .kh-show-more-btn:hover {
   color: var(--button-color);
-  border-color:var(--button-color);
+  border-color: var(--button-color);
 }
 
-@media (max-width: 768px) {
-
-  .kh-faq-container {
-    flex-direction: column;
-    border-bottom: none;
-
-  }
- .kh-show-more-wrapper {
-    display: block;
-  }
-
-
-
-  .kh-faq-column:first-child {
-    border-right: none;
-    width: 100%;
-  }
-.kh-faq-column:nth-child(2) {
-  border-right: none;
-    width: 100%;
-}
-
- 
-  .kh-faq-column:first-child .kh-faq-item:last-child {
-    border-bottom: 1px solid var(--color-body);
-  }
-}
 
 @media (max-width: 1440px) {
 
 
   .kh-faq-item {
-    padding: 24px;
+    padding: 12px;
+    min-height: 100px;
+    /* حسب أطول عنصر */
   }
 
   .kh-faq-number {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
+    width: 62px;
+    height: 62px;
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 10px;
   }
 
   .kh-faq-header h3 {
-    font-size: 15px;
+    font-size: 18px;
+    width: 412px;
   }
 
   .kh-faq-p {
     padding-left: 55px;
+    width: 400px;
+    font-size: 14px;
   }
 
-  .main-margin {
-    margin-right: var(--main-Hmargin-Dscreen);
-    margin-left: var(--main-Hmargin-Dscreen);
-}
-}
+  .kh-faq-p.open {
+    width: 474px;
+    padding-left: 75px;
 
-
-/* للشاشات أقل من 992px */
+  }
+}
 @media (max-width: 992px) {
   .kh-faq-container {
     flex-direction: column;
-    align-items: center; /* لتوسيط الأعمدة */
+    align-items: center;
     width: 100%;
     max-width: calc(100% - (var(--main-Hmargin-Dscreen) * 2));
     margin: 0 auto;
   }
 
   .kh-faq-column-wrapper {
-    width: 100%; /* كل عمود يشغل كامل العرض */
+    width: 100%;
   }
 
   .kh-faq-column:first-child {
@@ -270,9 +270,9 @@ color: var( --color-p);
     padding: 20px;
   }
 
-  .kh-left {
+  /* .kh-left {
     gap: 12px;
-  }
+  } */
 
   .kh-faq-number {
     width: 36px;
@@ -282,11 +282,10 @@ color: var( --color-p);
 
   .kh-faq-header h3 {
     font-size: 14px;
-    width: auto;
-    max-width: 100%;
+    width: 500px;
   }
 
-  /* إخفاء الخطوط المطلقة عند هذه الشاشة */
+
   .kh-faq-container::before,
   .kh-faq-container::after,
   .kh-middle-line {
@@ -295,62 +294,73 @@ color: var( --color-p);
 }
 
 @media screen and (max-width: 390px) {
-    /* الحاوية الكبرى للتوسيط */
-    .faq-section-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* توسيط أفقي */
-        padding: 0 10px;
-    }
 
-    .main-margin {
-        margin: 0 auto !important;
-        width: 100% !important;
-    }
+  .faq-section-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
 
-    .kh-faq-container {
-        display: block !important; /* تحويله لـ block ليظهر كعمود واحد */
-        width: 100% !important;
-        max-width: 370px;
-        height: auto !important; /* للسماح للجدول بالتمدد مع الجواب */
-        overflow: visible !important;
-    }
+  .kh-faq-number {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    padding: 25px;
+    border-radius: 8px;
+  }
 
-    .kh-faq-column {
-        width: 100% !important;
-        border-right: none !important;
-    }
+  .kh-faq-container {
+    display: block;
+    width: 100% !;
+    max-width: 370px;
+    height: auto;
+    overflow: visible;
+    pad: 24px;
+  }
 
-    /* إصلاح العنوان H3 لكي لا ينضغط */
-    .kh-faq-header h3 {
-        width: auto !important;
-        font-size: 14px !important;
-        line-height: 1.4;
-        flex: 1;
-    }
+  .kh-faq-column {
+    width: 100% !important;
+    border-right: 1px solid var(--color-rarbackground) !important;
+    border-left: 1px solid var(--color-rarbackground);
+    border-bottom: 1px solid var(--color-rarbackground);
+  }
 
-    /* تأكد أن الجواب يظهر بالكامل عند فتحه */
-    .kh-faq-p.open {
-        max-height: 1000px !important; /* مساحة كافية للجواب */
-        overflow: visible !important;
-    }
 
-    /* تنسيق الزر ليظهر بشكل واضح في المنتصف */
-    .kh-show-more-wrapper {
-        display: flex !important;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
+  .kh-faq-column .kh-faq-item:last-child {
+    border-bottom: none;
+  }
 
-    .kh-show-more-btn {
-        background-color: var(--color-body); 
-        color: var(--color-titles);
-        padding: 12px 25px;
-        border-radius: 5px;
-        border: 1px solid var(--button-color);
-        cursor: pointer;
-    }
+  .kh-faq-header h3 {
+    width: 192px;
+    font-size: 16px !important;
+    line-height: 1.4;
+    flex: 1;
+    padding-top: 8px;
+  }
+
+
+  .kh-faq-p.open {
+    width: 310px;
+    padding: 14px;
+
+  }
+
+  .kh-show-more-wrapper {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .kh-show-more-btn {
+    background-color: var(--color-body);
+    color: var(--color-titles);
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: 1px solid var(--button-color);
+    cursor: pointer;
+  }
 }

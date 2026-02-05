@@ -1,8 +1,9 @@
 import "./AboutSquareUp.css";
 const AboutSquareUp = () => {
   return (
-    <section className="ksh-about-container">
-      <div className="main-margin ksh-about-inner">
+    <section className="ksh-about-container main-margin ">
+      
+      <div className="ksh-about-inner">
 
         <div className="ksh-about-content">
           <h2>About SquareUp</h2>

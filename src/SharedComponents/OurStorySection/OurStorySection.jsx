@@ -1,21 +1,17 @@
 import './OurStorySection.css';
 import NumberCard from '../AtSquareUpSection/NumberCard';
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../../utils/config';
 
 function OurStorySection() {
 
     const [ourStoryData, setOurStoryData] = useState([]);
 
     useEffect(() => {
-        fetch('/Square-Up/saba-DataBase/OurStoryData.json')
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setOurStoryData(data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        fetch(`${API_BASE_URL}/ourstory`) 
+            .then((res) => res.json())
+            .then((data) => setOurStoryData(data))
+            .catch((err) => console.error("Error fetching FAQ:", err));
     }, []);
 
     return (

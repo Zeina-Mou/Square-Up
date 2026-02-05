@@ -1,7 +1,4 @@
-.sb-title-sec {
-    margin-left: var(--main-Hmargin-Dscreen);
-    margin-right: var(--main-Hmargin-Dscreen);
-}
+
 .sb-borderTitle{
     /* padding-bottom: 80px; */
     border: 1px var(--color-background) solid;
@@ -32,7 +29,7 @@
 .sb-title-sec .sb-desc2-sec {
     margin-left: 50px;
     margin-bottom: 80px;
-    width: 420px;
+    width: fit-content;
     font-size: 22px;
     padding: 12px 14px;
     border-radius: 6px;
@@ -41,10 +38,7 @@
 }
 
 @media (max-width: 1440px) {
-    .sb-title-sec {
-        margin-left:var(--main-Hmargin-Lscreen);
-        margin-right: var(--main-Hmargin-Lscreen);
-    }
+
 
     .sb-title-sec h2 {
         padding:80px 40px 0px;
@@ -63,17 +57,12 @@
     .sb-title-sec .sb-desc2-sec {
         margin-left: 40px;
         margin-bottom: 40px;
-        width: 341px;
         border-radius: 6px;
         padding: 10px;
         font-size: 18px;
     }
 }
 @media (max-width: 992px) {
-    .sb-title-sec {
-        margin-left: var(--main-Hmargin-Mscreen);
-        margin-right: var(--main-Hmargin-Mscreen);
-    }
 
     .sb-title-sec h2 {
         padding:40px 16px 0px;
@@ -91,7 +80,6 @@
 
     .sb-title-sec .sb-desc2-sec {
         margin-left: 16px;
-        width: 305px;
         border-radius: 6px;
         padding: 10px;
         font-size: 16px;

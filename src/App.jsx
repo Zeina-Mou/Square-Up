@@ -7,6 +7,7 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import NavBar from './SharedComponents/NavBar/NavBar'
 import Footer from './SharedComponents/Footer/Footer'
+import Dashboard from './Dash/Dashboard'
 
 function App() { 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/process' element={<Process/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
       <Footer />
     </>

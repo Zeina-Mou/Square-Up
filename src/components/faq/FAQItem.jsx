@@ -5,11 +5,10 @@ const FAQItem = ({ number, question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="kh-faq-item">
+    <div className={`kh-faq-item ${isOpen ? "active" : ""}`}>
       <div
         className="kh-faq-header"
-        onClick={() => setIsOpen(!isOpen)} 
-        style={{ cursor: "pointer" }} 
+        onClick={() => setIsOpen(!isOpen)}
       >
         <div className="kh-left">
           <span className={`kh-faq-number ${isOpen ? "active" : ""}`}>
@@ -21,19 +20,24 @@ const FAQItem = ({ number, question, answer }) => {
         <button
           className="kh-toggle-btn"
           onClick={(e) => {
-            e.stopPropagation(); 
+            e.stopPropagation();
             setIsOpen(!isOpen);
           }}
+          aria-label="Toggle FAQ"
         >
-          {isOpen ? "×" : "+"}
+          <img
+            src={
+              isOpen
+                ? "assets/img/home/close.svg"
+                : "assets/img/home/open.svg"
+            }
+            alt="toggle icon"
+            className="kh-toggle-icon"
+          />
         </button>
       </div>
 
-      {/* الإجابة */}
-      <div
-        className={`kh-faq-p ${isOpen ? "open" : ""}`}
-   
-      >
+      <div className={`kh-faq-p ${isOpen ? "open" : ""}`}>
         <p>{answer}</p>
       </div>
     </div>

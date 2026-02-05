@@ -2,29 +2,25 @@
 import { useEffect, useState, useRef } from 'react';
 import ClientCard from './ClientCard';
 import './ClientsOpinion.css';
+import { API_BASE_URL } from '../../utils/config';
 
 function ClientsOpinion() {
+    function getVisibleCards(width) {
+        if (width <= 992) return 1;       
+        if (width <= 1440) return 2;    
+        return 6;                    
+    }
     const [clientOpinion, setClientOpinionData] = useState([]);
     const [visible, setVisible] = useState(() => getVisibleCards(window.innerWidth));
     const [currentIndex, setCurrentIndex] = useState(0);
     const trackRef = useRef(null);
 
     useEffect(() => {
-        fetch('/Square-Up/saba-DataBase/ClientOpinionData.json')
-            .then((response) => response.json())
-            .then((data) => {
-                setClientOpinionData(data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        fetch(`${API_BASE_URL}/testimonials`) 
+            .then((res) => res.json())
+            .then((data) => setClientOpinionData(data))
+            .catch((err) => console.error("Error fetching FAQ:", err));
     }, []);
-
-    function getVisibleCards(width) {
-        if (width <= 992) return 1;       
-        if (width <= 1440) return 2;    
-        return 6;                    
-    }
 
     useEffect(() => {
         const onResize = () => {

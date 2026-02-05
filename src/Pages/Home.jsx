@@ -5,9 +5,16 @@ import HomeCards from "../SharedComponents/HomeCards/HomeCards";
 import HomeCard2 from "../SharedComponents/HomeCard2/HomeCard2";
 import ClientsOpinion from "../SharedComponents/ClientsOpinion/ClientsOpinion";
 import HeaderSection from "../SharedComponents/HeaderSection/HeaderSection";
-import Companise from "../components/Companise/Companise";
+import Companies from "../components/Companise/Companise";
 import FAQList from "../components/faq/FAQList";
-import Hero from "../Components/Hero/Hero";
+import Hero from "../components/Hero/Hero";
+import { API_BASE_URL } from '../utils/config';
+import zapier from "../../public/assets/img/home/companies/zapier.svg"
+import Zoom from "../../public/assets/img/home/companies/zoom.svg"
+import Adobe from "../../public/assets/img/home/companies/adobe.svg"
+import amazon from "../../public/assets/img/home/companies/amazon.svg"
+import Slack from "../../public/assets/img/home/companies/slack.svg"
+import Spotify from "../../public/assets/img/home/companies/spotify.svg"
 
 const Home = () => {
   // استدعاء الداتا 
@@ -15,25 +22,36 @@ const Home = () => {
   const [cardchoose, setCard] = useState([]);
 
   useEffect(() => {
-    fetch('assets/data/card1.json')
-      .then(res => res.json())
-      .then(data => setCards(data))
-      .catch(err =>
-        console.error("error loading card1", err));
+      fetch(`${API_BASE_URL}/ourservices`) 
+          .then((res) => res.json())
+          .then((data) => setCards(data))
+          .catch((err) => console.error("Error fetching FAQ:", err));
   }, []);
 
   useEffect(() => {
-    fetch('assets/data/card2.json')
-      .then(res => res.json())
-      .then(data => setCard(data))
-      .catch(err =>
-        console.error("error loading card2", err));
+      fetch(`${API_BASE_URL}/aboutus`) 
+          .then((res) => res.json())
+          .then((data) => setCard(data))
+          .catch((err) => console.error("Error fetching FAQ:", err));
   }, []);
+
+  const companies = [
+    { name: "Zapier", logo: zapier },
+    { name: "Spotify", logo: Spotify },
+    { name: "Zoom", logo: Zoom },
+    { name: "Slack", logo: Slack },
+    { name: "amazon", logo: amazon },
+    { name: "Adobe", logo: Adobe },
+  ];
 
   return (
     <>
       <Hero/>
-      <Companise/>
+      <ul className="companyName">
+        {companies.map((company, index) => (
+          <Companies key={index} name={company.name} logo={company.logo} />
+        ))}
+      </ul>
       <HeaderSection
         title="Our Services"
         description="Transform your brand with our innovative digital solutions that captivate and engage your audience."

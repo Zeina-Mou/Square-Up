@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FAQItem from "./FAQItem";
 import "./FAQList.css";
+import { API_BASE_URL } from '../../utils/config';
 
 const FAQList = () => {
   const [faqData, setFaqData] = useState([]);
@@ -8,11 +9,11 @@ const FAQList = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    fetch("data/data.json")
-      .then((res) => res.json())
-      .then((data) => setFaqData(data))
-      .catch((err) => console.error(err));
-  }, []);
+    fetch(`${API_BASE_URL}/faq`) 
+        .then((res) => res.json())
+        .then((data) => setFaqData(data))
+        .catch((err) => console.error("Error fetching FAQ:", err));
+}, []);
 
   useEffect(() => {
     const checkScreen = () => setIsSmallScreen(window.innerWidth <= 768);
@@ -25,14 +26,14 @@ const FAQList = () => {
   const secondColumn = faqData.slice(4, 8);
 
   return (
-    <div className="faq-section-parent">
-      <div className={`kh-faq-container main-margin ${showAll ? "is-expanded" : ""}`}>
+    <div className="faq-section-parent main-margin">
+      <div className={`kh-faq-container  ${showAll ? "is-expanded" : ""}`}>
         
         {/* العمود الأول */}
         <div className="kh-faq-column">
           {firstColumn.map((item, index) => (
             <FAQItem
-              key={item.id}
+              key={item.id || index}
               number={String(index + 1).padStart(2, "0")}
               question={item.question}
               answer={item.answer}

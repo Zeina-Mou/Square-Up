@@ -1,116 +1,59 @@
-/*
-========================================
-Trusted Companies Section Styles
-========================================
-
-This stylesheet defines the layout and
-responsive behavior of the "Trusted By
-Companies" section.
-
-- Centers the section and controls spacing.
-- Styles the title inside a rounded container.
-- Displays company logos using flex on large screens and grid on small screens.
-- Ensures responsive typography and logo sizing.
-- Uses CSS variables for colors and margins.
-
-Media queries adjust font sizes, spacing,
-and layout to maintain visual consistency
-across different screen sizes.
-========================================
-*/
-
-
-.mn-trusted-companies {
-    margin-top: -50px;
-    position: relative;
-    z-index: 20;
+.companyName {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mn-trusted-title-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20PX 34px;
-    gap: 10px;
-    border: 1px solid var(--color-background);
-    background-color: var(--color-body);
-    border-radius: 100px;
-    width: fit-content;
-    position: relative;
-    top: 10px;
-    margin-bottom: -20px;
-    z-index: 10;
-
-}
-
-.mn-trusted-title {
-    color: var(--color-text);
-    font-family: "Barlow", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.mn-trusted-logos {
-    margin-top: 29px;
-    max-width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 0 40px 0;
+    justify-content: space-between;
     margin-right: var(--main-Hmargin-Dscreen);
     margin-left: var(--main-Hmargin-Dscreen);
-
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #262626;
 }
 
-.mn-trusted-logos img {
-    padding: 1.25rem 2.5rem;
-    max-width: 15.831rem;
+.companyName .company {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    width: clamp(70px, 100%, 100%);
 }
 
-@media (max-width:1440px) {
-    .mn-trusted-title{
-        font-size: 14px;
+.company img {
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1440px) {
+    .company img {
+        max-width: 100px;
     }
-    .mn-trusted-logos{
-    
-        max-width: 1280px;
+
+    .companyName .company {
+        margin: 50px 0;
+    }
+
+    .companyName {
         margin-right: var(--main-Hmargin-Lscreen);
         margin-left: var(--main-Hmargin-Lscreen);
     }
 }
 
-@media (max-width: 992px) {
-    .mn-trusted-title-box{
-        padding: 14px 24px;
 
-    }
-    .mn-trusted-title{
-        font-size: 14px;
-    }
-    .mn-trusted-logos{
-        width: 355px;
+
+@media screen and (max-width: 992px) {
+    .companyName {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        padding-top: 20px;
-        border: 1px solid var( --color-background);
-        border-radius: 0px 1px 1px 1px;
-        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin-right: var(--main-Hmargin-Mscreen);
+        margin-left: var(--main-Hmargin-Mscreen);
     }
-    .mn-trusted-logos img{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 30px;
-        border-bottom: 1px solid var( --color-background);
-        border-right: 1px solid var( --color-background);
+
+    .company img {
+        max-width: 100px;
     }
-    .mn-trusted-logos img:nth-child(2n){
-        border-right: none;
-    }
-    .mn-trusted-logos img:nth-last-child(-n+2){
-        border-bottom: none;
+
+    .companyName .company {
+        border: 1px solid rgb(66, 66, 66);
+        margin: 0;
+        padding: 30px 0;
     }
 }
