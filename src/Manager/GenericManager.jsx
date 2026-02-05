@@ -150,7 +150,7 @@ const handleDelete = async (index) => {
                             fontWeight: 'bold'
                         }}
                     >
-                        💾 Save All Changes
+                        Save Changes
                     </button>
                 </div>
             </div>
